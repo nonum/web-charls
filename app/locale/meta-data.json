@@ -1,0 +1,79 @@
+[
+	{
+		"section" : "curriculum",
+		"active": "true",
+		"sub_sections": [
+			{
+				"entity" : "personal_information",
+				"active": "true",
+				"type": "simple_field",
+				"fields": [
+					{ "name": "birday", "type": "date", "order": "1"},
+					{ "name": "address", "type": "string", "order": "2"},
+					{ "name": "cp", "type": "string", "order": "3"},
+					{ "name": "city", "type": "string", "order": "4"},
+					{ "name": "province", "type": "string", "order": "5"},
+					{ "name": "mobile_phone", "type": "number", "order": "6"},
+					{ "name":  "name", "type": "mail", "order": "7"},
+					{ "name": "web", "type": "link", "order": "8"}
+				]	
+			},
+			{
+				"entity" : "experience",
+				"active": "true",
+				"type": "complex_list",
+				"fields": [
+					{   
+						"name": [ "company", "client" ], 
+						"type": "complex", 
+						"subname": { "name": [ "start_date", "end_date" ], "type": "date" },
+						"order": "1"
+					},
+					{  
+						"name": "description", 
+						"type": "string",
+						"order": "1"
+					}
+				]
+			},
+			{
+				"entity" : "education",
+				"active": "true",
+				"type": "simple_list",
+				"fields": [
+					{ 
+						"name": "birday", "type": "repeat_string", "order": "1"
+					}
+				]
+			},
+			{
+				"entity" : "course",
+				"active": "true",
+				"type": "group_list",
+				"group" : "school",
+				"fields": [
+					{   
+						"name" : "name",
+						"subname": { "name": [ "duration", "year" ], "type": "date_h" },
+						"order": "1"
+					}
+				]
+			},
+			{
+				"entity" : "language",
+				"active": "true",
+				"type": "simple_list",
+				"fields": [
+					{ "name": "birday", "type": "repeat_string", "order": "1"}
+				]
+			}
+
+		]
+	},
+	{
+		"section" : "curriculum_tecnico",
+		"active": "false",
+		"info": [
+		]
+	}
+]

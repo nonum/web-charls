@@ -1,0 +1,10 @@
+<ul class="nav nav-tabs" ng-show="{{sections.length > 1}}">
+	<li class="{{ section.active ? 'active' : ''}}" ng-repeat="section in sections">
+		<a href="" ng-click="clickSection(section.id)" id="section.id">{{section.section_name}}</a>
+	</li>
+</ul>
+<div class="tab-content">
+	<div id="section.id" ng-repeat="section in sections | filter :{ active : true}">
+		<info-raw ng-repeat"field in section.sub_sections" entities="entities" field="field"></info-raw> -->
+	</div>
+</div>

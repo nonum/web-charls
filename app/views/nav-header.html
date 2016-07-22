@@ -1,0 +1,25 @@
+<div class="navbar navbar-default navbar-inverse" role="navigation">
+	<div class="container" ng-controller="NavHeaderCtrl">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+
+			<a class="navbar-brand align-center" href="#/init">
+				<i class="glyphicon glyphicon-home"></i> Inicio</a>
+		</div>
+		<div class="collapse navbar-collapse" id="js-navbar-collapse">
+			<ul class="nav navbar-nav text-center">
+				<li ng-repeat="item in nav">
+					<a href="#/{{item.route}}">
+						<i class="{{item.icon}}"></i></br>
+						{{item.name}}
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
