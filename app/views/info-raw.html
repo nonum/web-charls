@@ -1,9 +1,2 @@
-<uib-accordion>
-	<uib-accordion-group heading="{{entity[metaData.entity].name}}" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
-		<ul>
-			<li ng-repeat="field in metaData.fields">
-				<h4>{{ entity[metaData.entity][field.name] }}</h4>
-			</li>
-		</ul>
-    </uib-accordion-group>
-</uib-accordion>
+<div class="col-md-1">curriculum.label</div>
+<div class="col-md-11">{{ raw.value }}</div>

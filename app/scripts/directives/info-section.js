@@ -11,18 +11,19 @@
  	return {
  		templateUrl: 'views/info-section.html',
  		restrict: 'E',
-
  		scope: {
- 			metaData: '=metaData',
- 			entities: '=entity',
- 			sectionActive: '=sectionActive'
+ 			entity: '=entity',
+ 			metaData: '=metaData'
  		},
- 		controller : function ($scope,$filter) {
+ 		controller : function ($scope) {
 
-			$scope.entityRaw = $filter('filter')($scope.entities, { id: $scope.sectionActive})[0];
- 			$scope.clickSection = function(section) {
- 				$scope.sectionActive = section;
- 				$scope.entityRaw = $filter('filter')($scope.entities, { id: $scope.sectionActive})[0];
+ 			$scope.oneAtATime = false;
+
+ 			$scope.fields = $scope.metaData.fields;
+ 			$scope.status = {
+ 				isCustomHeaderOpen: false,
+ 				isFirstOpen: true,
+ 				isFirstDisabled: false
  			};
  		}
  	};

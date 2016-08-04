@@ -1,0 +1,12 @@
+<ul class="nav nav-tabs" ng-show="{{entities.length > 1}}">
+	<li class="{{ entity == sectionActive ? 'active' : ''}}" ng-repeat="entity in entities">
+		<a href="" ng-click="clickSection(entity.id)" id="entity.id">{{entity.name}}</a>
+	</li>
+</ul>
+<div class="tab-content">
+	<div id="section.id" ng-repeat="section in metaData | filter : { name : selectionActive }">
+		<div id="field.entity" ng-repeat="field in section.sub_sections">
+			<info-section entity="entityRaw" meta-data="field"></info-section>
+		</div>
+	</div>
+</div>
