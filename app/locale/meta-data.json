@@ -1,20 +1,20 @@
-[
+{
+	"curriculum": [
 	{
-		"section" : "curriculum",
-		"active": "true",
+		"name" : "curriculum_vitae",
 		"sub_sections": [
 			{
 				"entity" : "personal_information",
 				"active": "true",
 				"type": "simple_field",
 				"fields": [
-					{ "name": "birday", "type": "date", "order": "1"},
+					{ "name": "birthday", "type": "date", "order": "1"},
 					{ "name": "address", "type": "string", "order": "2"},
 					{ "name": "cp", "type": "string", "order": "3"},
 					{ "name": "city", "type": "string", "order": "4"},
 					{ "name": "province", "type": "string", "order": "5"},
 					{ "name": "mobile_phone", "type": "number", "order": "6"},
-					{ "name":  "name", "type": "mail", "order": "7"},
+					{ "name":  "mail", "type": "mail", "order": "7"},
 					{ "name": "web", "type": "link", "order": "8"}
 				]	
 			},
@@ -42,7 +42,7 @@
 				"type": "simple_list",
 				"fields": [
 					{ 
-						"name": "birday", "type": "repeat_string", "order": "1"
+						"name": "instead_studies", "type": "repeat_string", "order": "1"
 					}
 				]
 			},
@@ -71,9 +71,14 @@
 		]
 	},
 	{
-		"section" : "curriculum_tecnico",
-		"active": "false",
-		"info": [
+		"name" : "curriculum_tecnico",
+		"sub_sections": [
 		]
 	}
+],
+
+"development": [
 ]
+
+}
+

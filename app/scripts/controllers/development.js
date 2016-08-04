@@ -8,24 +8,15 @@
  * Controller of the webAppApp
  */
 angular.module('webAppApp')
-  .controller('DevelopmentCtrl', [ '$scope', function ($scope) {
-    $scope.sections = [
- 		{ name: 'Curriculum Vitae', active: true, message: 'Este es el curriculum vitae', id: 'tab1'},
- 		{ name: 'Curriculum técnico', active: false, message: 'Este es el curriculum técnico', id: 'tab2'}
- 	];
+  .controller('DevelopmentCtrl', [ '$scope', 'locale', function ($scope,locale) {
+   
+    locale.get('meta-data').then(function (msg) {
+ 		$scope.metaData = msg.data['curriculum'];
+ 		$scope.sectionActive = $scope.metaData[0].section;
+ 	});
 
-	$scope.menus = [{ name: 'Carlos Gallardo', 
-							  type: '', 
-							  subMenus : [
-							  	{name: 'subMenu1'},
-							  	{name: 'subMenu2'},
-							  	{name: 'subMenu3'},
-							  	], 
-							  subname: 'Curriculum'}
-							  ];			   	
-
-    $scope.metaData = {
-    	sections: $scope.sections,
-    	menus: $scope.menus
-    };
+ 	locale.get('curriculum').then(function (msg) {
+ 		$scope.curriculum = msg.data;
+ 		$scope.sectionActive = !!$scope.sectionActive ? $scope.sectionActive : $scope.curriculum[0].id;
+ 	});
   }]);

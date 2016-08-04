@@ -13,12 +13,14 @@ angular.module('webAppApp')
  		restrict: 'E',
  		scope: {
  			metaData: '=metaData',
- 			entities: '=entity'
+ 			entities: '=entity',
+ 			sectionActive: '=sectionActive'
  		},
  		controller : function ($scope, $filter) {
 
-			$scope.fields = $filter('filter')($scope.metaData, { active: true})[0].sub_section;
-			$scope.entity = $filter('filter')($scope.entities, { active: true})[0];
+			$scope.fields = $filter('filter')($scope.metaData, { name: $scope.sectionActive})[0].sub_sections;
+						
+			$scope.entity = $filter('filter')($scope.entities, { id: $scope.sectionActive})[0];
 				
  		}
     };

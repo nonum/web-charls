@@ -13,15 +13,16 @@
  		restrict: 'E',
 
  		scope: {
- 			sections: '=sections',
- 			entity: '=entity'
+ 			metaData: '=metaData',
+ 			entities: '=entity',
+ 			sectionActive: '=sectionActive'
  		},
- 		controller : function ($scope) {
+ 		controller : function ($scope,$filter) {
 
+			$scope.entityRaw = $filter('filter')($scope.entities, { id: $scope.sectionActive})[0];
  			$scope.clickSection = function(section) {
- 				angular.forEach($scope.sections, function(item) {
- 					item.active = (item.section_name == section);
- 				}); 
+ 				$scope.sectionActive = section;
+ 				$scope.entityRaw = $filter('filter')($scope.entities, { id: $scope.sectionActive})[0];
  			};
  		}
  	};

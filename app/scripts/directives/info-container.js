@@ -14,7 +14,8 @@
 
  		scope: {
  			metaData: '=metaData',
- 			entity: '=entity'
+ 			entity: '=entity',
+ 			sectionActive: '=sectionActive'
  		},
  		controller : function ($scope) {
 

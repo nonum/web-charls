@@ -12,14 +12,15 @@
 
 
 
+
  	locale.get('meta-data').then(function (msg) {
- 		$scope.metaData = msg.data;
+ 		$scope.metaData = msg.data['curriculum'];
  		$scope.sectionActive = $scope.metaData[0].section;
  	});
 
  	locale.get('curriculum').then(function (msg) {
  		$scope.curriculum = msg.data;
- 		$scope.curriculum[0].active = true;
+ 		$scope.sectionActive = !!$scope.sectionActive ? $scope.sectionActive : $scope.curriculum[0].id;
  	});
  	
 

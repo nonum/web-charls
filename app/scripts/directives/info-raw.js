@@ -12,7 +12,8 @@
  		templateUrl: 'views/info-raw.html',
  		restrict: 'E',
  		scope: {
- 			
+ 			entity: '=entity',
+ 			metaData: '=metaData'
  		},
  		controller : function ($scope) {
 

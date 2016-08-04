@@ -1,84 +1,90 @@
-{
- 	"curriculum_vitae" : {
- 			"name": "Curriculum Vitae",
- 	 		"id" : "CV",
-      		"personal_information" : {
-				"name": "Información Personal",
-		  		"birthday" : "Sun Jul 10 2016 14:35:19 GMT+0200 (Hora de verano romance)",
-				"address": "Calle del Muelle, 34, 8ºB.",
-				"cp": "33402",
-				"city": "Avilés",
-				"province": "Asturias",
-				"mobile_phone": "+34 675465536",
-				"mail": "carlosgallardo@hotmail.es",
-				"web": "es.linkedin.com/pub/carlos-gallardo-rama/58/816/920/"
-			},
-			"experience": {
-				"name": "Experiencia Laboral",
-				"work_experience" : [
-					{
-						"client": "SATEC",
-						"company": "BOYCOR",
-						"start_date": "21/12/2015",
-						"end_date": "",
-						"description": "Analista Desarrollador: Proyecto de desarrollo del sistema CRM y ERP de una compañía de telefónica e internet de Angola."
-					},
-					{
-						"client": "CSC",
-						"company": "EXPERIS",
-						"start_date": "08/07/2014",
-						"end_date": "18/12/2015",
-						"description": "Desarrollador: Proyecto de desarrollo de una plataforma web para una compañía de construcciones. Desarrollo en JAVA/J2EE, AngularJS, Javascript, Hibernate, Spring, Spring security, Spring MVC, Postgres, Grunt y Jboss."
-					},
-					{
-						"client": "Ferrovial",
-						"company": "CGI Group Inc.",
-						"start_date": "08/01/2014",
-						"end_date": "30/05/2014",
-						"description": "Programador Junior: Soporte en el área de mantenimiento en Ferrovial autopistas. Desarrollo en JAVA/J2EE, Hibernate, JSF, Jboss, máquinas UNIX."
-					},
-					{
-						"client": "YOIGO",
-						"company": "CGI Group Inc.",
-						"start_date": "24/10/2011",
-						"end_date": "07/01/2014",
-						"description": "Programador Junior (realizando funciones de Analista): Desarrollo de soluciones tecnológicas en las telecomunicaciones en JAVA/J2EE, en diferentes sistemas operativos y bases de datos (Oracle, Sybase, MySQL y SQLServer), máquinas Windows."
-					}
-				]
-			},
-			"education": {
-				"name": "Educación",
-				"instead_studies": [
-						{"name": "Ingeniería Informática en la Universidad Politécnica de Madrid"},
-						{"name": "Quinto curso realizado en Linköping Universitet (Suecia)."},
-						{"name": "Proyecto Fin de Carrera: CHINAPP: Aplicación Web generadora de aplicación móvil multilenguaje para el aprendizaje de chino."}
-				]
-			},
-			"course": {
-				"name": "Cursos",
-				"subjet": [
-						{"name": "Hibernate", "duration" : "30", "type_duration": "h", "year": "2013", "school": "SUNION"},
-						{"name": "J2EE EJB3", "duration" : "30", "type_duration": "h", "year": "2013", "school": "SUNION"},
-						{"name": "J2EE JSP", "duration" : "30", "type_duration": "h", "year": "2013", "school": "SUNION"},
-						{"name": "Agilidad y Lean: Gestión de proyectos.", "duration" : "40", "type_duration": "h", "year": "2014", "school": "MiriadaX"},
-						{"name": "Desarrollo de Aplicaciones en HTML5 y para Dispositivos Móviles Firefox O.S.", "duration" : "20", "type_duration": "h", "year": "2014", "school": "MiriadaX"},
-						{"name": "Habilidades Sociales", "duration" : "24", "type_duration": "h", "year": "2013", "school": "MAFOREM (Madrid Formación y Empleo"}
-				]
-			},
-			"language" : {
-				"name": "Idiomas",
-				"idiom": [
-					{"name": "Inglés", "description": "Nivel alto leído, nivel medio escrito y hablado."},
-					{"name": "Chino", "description": "Nivel HSK2."},
-					{"name": "Sueco", "description": "Nociones básicas."}
-				]
-			}	
+[
+	{ 
+		"id": "curriculum_vitae",
+		"name": "Curriculum Vitae",
+		"personal_information" : 
+		{
+			"name": "Información Personal",
+			"birthday" : "Sun Jul 10 201 14:35:19 GMT+0200 (Hora de verano romance)",
+			"address": "Calle del Muelle, 34, 8ºB.",
+			"cp": "33402",
+			"city": "Avilés",
+			"province": "Asturias",
+			"mobile_phone": "+34 675465536",
+			"mail": "carlosgallardo@hotmail.es",
+			"web": "es.linkedin.com/pub/carlos-gallardo-rama/58/816/920/"
 		},
-	"curriculum_vitae" : {
- 	  		"name": "Curriculum Vitae",
- 	  		"id" : "CV"
- 	  	}
+		"experience": 
+		{
+			"name": "Experiencia Laboral",
+			"work_experience" : 
+			[
+				{
+					"client": "SATEC",
+					"company": "BOYCOR",
+					"start_date": "21/12/2015",
+					"end_date": "",
+					"description": "Analista Desarrollador: Proyecto de desarrollo del sistema CRM y ERP de una compañía de telefónica e internet de Angola."
+				},
+				{
+					"client": "CSC",
+					"company": "EXPERIS",
+					"start_date": "08/07/2014",
+					"end_date": "18/12/2015",
+					"description": "Desarrollador: Proyecto de desarrollo de una plataforma web para una compañía de construcciones. Desarrollo en JAVA/J2EE, AngularJS, Javascript, Hibernate, Spring, Spring security, Spring MVC, Postgres, Grunt y Jboss."
+				},
+				{
+					"client": "Ferrovial",
+					"company": "CGI Group Inc.",
+					"start_date": "08/01/2014",
+					"end_date": "30/05/2014",
+					"description": "Programador Junior: Soporte en el área de mantenimiento en Ferrovial autopistas. Desarrollo en JAVA/J2EE, Hibernate, JSF, Jboss, máquinas UNIX."
+				},
+				{
+					"client": "YOIGO",
+					"company": "CGI Group Inc.",
+					"start_date": "24/10/2011",
+					"end_date": "07/01/2014",
+					"description": "Programador Junior (realizando funciones de Analista): Desarrollo de soluciones tecnológicas en las telecomunicaciones en JAVA/J2EE, en diferentes sistemas operativos y bases de datos (Oracle, Sybase, MySQL y SQLServer), máquinas Windows."
+				}
+			]
+		},
+		"education": 
+		{
+			"name": "Educación",
+			"instead_studies": 
+			[
+				{"name": "Ingeniería Informática en la Universidad Politécnica de Madrid"},
+				{"name": "Quinto curso realizado en Linköping Universitet (Suecia)."},
+				{"name": "Proyecto Fin de Carrera: CHINAPP: Aplicación Web generadora de aplicación móvil multilenguaje para el aprendizaje de chino."}
+			]
+		},
+		"course": 
+		{
+			"name": "Cursos",
+			"subjet": 
+			[
+				{"name": "Hibernate", "duration" : "30", "type_duration": "h", "year": "2013", "school": "SUNION"},
+				{"name": "J2EE EJB3", "duration" : "30", "type_duration": "h", "year": "2013", "school": "SUNION"},
+				{"name": "J2EE JSP", "duration" : "30", "type_duration": "h", "year": "2013", "school": "SUNION"},
+				{"name": "Agilidad y Lean: Gestión de proyectos.", "duration" : "40", "type_duration": "h", "year": "2014", "school": "MiriadaX"},
+				{"name": "Desarrollo de Aplicaciones en HTML5 y para Dispositivos Móviles Firefox O.S.", "duration" : "20", "type_duration": "h", "year": "2014", "school": "MiriadaX"},
+				{"name": "Habilidades Sociales", "duration" : "24", "type_duration": "h", "year": "2013", "school": "MAFOREM (Madrid Formación y Empleo"}
+			]
+		},
+		"language" : 
+		{
+			"name": "Idiomas",
+			"idiom": 
+			[
+				{"name": "Inglés", "description": "Nivel alto leído, nivel medio escrito y hablado."},
+		 		{"name": "Chino", "description": "Nivel HSK2."},
+				{"name": "Sueco", "description": "Nociones básicas."}
+			]
+		}	
+	},
+	{
+		"id": "curriculum_tecnico",
+		"name": "Curriculum Técnico"
  	}
-}
-
-	
+]
