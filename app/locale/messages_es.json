@@ -1,0 +1,10 @@
+{
+	"curriculum.label.birthday" : "Fecha nacimiento:",
+	"curriculum.label.address": "Dirección:",
+	"curriculum.label.cp": "CP:",
+	"curriculum.label.city": "Ciudad:",
+	"curriculum.label.province": "Provincia:",
+	"curriculum.label.mobile_phone": "Telefono:",
+ 	"curriculum.label.mail": "Correo:",
+ 	"curriculum.label.web": "Web:"
+}

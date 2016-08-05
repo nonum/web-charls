@@ -18,9 +18,10 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'pascalprecht.translate'
   ])
-  .config(function ($routeProvider) {
+  .config(['$routeProvider','$translateProvider', function ($routeProvider,$translateProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -55,4 +56,13 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  });
+
+      $translateProvider.useStaticFilesLoader({
+        prefix: constants.HOST_SERVER_LOCALE + '/messages_',                //local
+        // prefix: '/sigma-ihm-0.0.10/locale/messages_',                    //serve
+        suffix: '.json'
+      });
+
+      // Setting up french as default
+      $translateProvider.preferredLanguage('es');
+  }]);

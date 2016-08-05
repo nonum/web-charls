@@ -8,14 +8,14 @@
 				"active": "true",
 				"type": "simple_field",
 				"fields": [
-					{ "name": "birthday", "type": "date", "order": "1"},
-					{ "name": "address", "type": "string", "order": "2"},
-					{ "name": "cp", "type": "string", "order": "3"},
-					{ "name": "city", "type": "string", "order": "4"},
-					{ "name": "province", "type": "string", "order": "5"},
-					{ "name": "mobile_phone", "type": "number", "order": "6"},
-					{ "name":  "mail", "type": "mail", "order": "7"},
-					{ "name": "web", "type": "link", "order": "8"}
+					{ "name": "birthday", "type": "date", "label": "curriculum.label.birthday", "order": "1"},
+					{ "name": "address", "type": "string", "label": "curriculum.label.address","order": "2"},
+					{ "name": "cp", "type": "string", "label": "curriculum.label.cp","order": "3"},
+					{ "name": "city", "type": "string", "label": "curriculum.label.city","order": "4"},
+					{ "name": "province", "type": "string", "label": "curriculum.label.province","order": "5"},
+					{ "name": "mobile_phone", "type": "number", "label": "curriculum.label.mobile_phone","order": "6"},
+					{ "name": "mail", "type": "mail", "label": "curriculum.label.mail","order": "7"},
+					{ "name": "web", "type": "link", "label": "curriculum.label.web","order": "8"}
 				]	
 			},
 			{

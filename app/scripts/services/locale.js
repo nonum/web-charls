@@ -12,7 +12,7 @@ angular.module('webAppApp')
     return {
         get: function (file) {
             console.log("inside function");
-            return $http.get('http://localhost:9000/locale/' + file + '.json');
+            return $http.get(constants.HOST_SERVER_LOCALE + file + '.json');
         }
     };
 });
