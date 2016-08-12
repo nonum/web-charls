@@ -8,7 +8,7 @@
 				"active": "true",
 				"type": "simple_field",
 				"fields": [
-					{ "name": "birthday", "type": "date", "label": "curriculum.label.birthday", "order": "1"},
+					{ "name": "birthday", "type": "string", "label": "curriculum.label.birthday", "order": "1"},
 					{ "name": "address", "type": "string", "label": "curriculum.label.address","order": "2"},
 					{ "name": "cp", "type": "string", "label": "curriculum.label.cp","order": "3"},
 					{ "name": "city", "type": "string", "label": "curriculum.label.city","order": "4"},

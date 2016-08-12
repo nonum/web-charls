@@ -2,7 +2,7 @@
 	<uib-accordion-group heading="{{entity[metaData.entity].name}}" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
 		
 			<div ng-repeat="field in fields">
-				<info-raw entity="entity[metaData.entity]" field="field"> </info-raw>
+				<info-raw type="info-simple-field-raw" entity="entity[metaData.entity]" field="field"> </info-raw>
 			</div>
 		
     </uib-accordion-group>

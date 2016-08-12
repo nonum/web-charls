@@ -9,11 +9,14 @@
  angular.module('webAppApp')
  .directive('infoRaw', function ($filter) {
  	return {
- 		templateUrl: 'views/info-raw.html',
+ 		templateUrl: function(elem, attr) {
+	      return 'views/info-raw-' + attr.type + '.html';
+    	},
  		restrict: 'E',
  		scope: {
  			entity: '=entity',
- 			field: '=field'
+ 			field: '=field',
+ 			type: '='
  		},
  		controller : function ($scope) {
 
@@ -31,6 +34,7 @@
  				isFirstOpen: true,
  				isFirstDisabled: false
  			};
- 		}
+ 		},
+ 
  	};
  });
