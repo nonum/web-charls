@@ -21,9 +21,6 @@
             var content = linkFn(scope);
             element.append(content);
         },
- 	//	templateUrl:  function(init,attr) {
- 	//		return 'views/info-raw-' + attr.type + '.html';
- 	//	},
  		restrict: 'E',
  		scope: {
  			entity: '=entity',
@@ -83,6 +80,7 @@
  				isFirstOpen: true,
  				isFirstDisabled: false
  			};
- 		}
+ 		},
+ 
  	};
  });

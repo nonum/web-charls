@@ -35,24 +35,41 @@ angular
         controllerAs: 'about'
       })
       .when('/curriculum', {
-        templateUrl: 'views/curriculum.html',
-        controller: 'CurriculumCtrl',
-        controllerAs: 'curriculum'
+        templateUrl: 'views/info-entity.html',
+        controller: 'InfoEntityCtrl',
+        controllerAs: 'curriculum',
+        resolve: {
+          entity: function ($route) { $route.current.params.entity = constants.ENTITY_CURRICULUM; }
+        }
       })
       .when('/development', {
-        templateUrl: 'views/development.html',
-        controller: 'DevelopmentCtrl',
-        controllerAs: 'development'
+        templateUrl: 'views/info-entity.html',
+        controller: 'InfoEntityCtrl',
+        controllerAs: 'development',
+        resolve: {
+          entity: function ($route) { $route.current.params.entity = constants.ENTITY_DEVELOPMENT; }
+        }
       })
       .when('/surf', {
-        templateUrl: 'views/surf.html',
-        controller: 'SurfCtrl',
-        controllerAs: 'surf'
+        templateUrl: 'views/info-entity.html',
+        controller: 'InfoEntityCtrl',
+        controllerAs: 'surf',
+        resolve: {
+          entity: function ($route) { $route.current.params.entity = constants.ENTITY_SURF; }
+        }
       })
       .when('/contact', {
-        templateUrl: 'views/contact.html',
-        controller: 'ContactCtrl',
-        controllerAs: 'contact'
+        templateUrl: 'views/info-entity.html',
+        controller: 'InfoEntityCtrl',
+        controllerAs: 'contact',
+        resolve: {
+          entity: function ($route) { $route.current.params.entity = constants.ENTITY_CONTACT; }
+        }
+      })
+      .when('/info-entity', {
+        templateUrl: 'views/info-entity.html',
+        controller: 'InfoEntityCtrl',
+        controllerAs: 'infoEntity'
       })
       .otherwise({
         redirectTo: '/'
