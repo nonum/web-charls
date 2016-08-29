@@ -4,19 +4,17 @@
 		"name": "Curriculum Vitae",
 		"personal_information" : 
 		{
-			"name": "Información Personal",
-			"birthday" : "Sun Jul 10 201 14:35:19 GMT+0200 (Hora de verano romance)",
+			"name": "INFORMACIÓN PERSONAL",
+			"birthday" : "9 de julio de 1984",
 			"address": "Calle del Muelle, 34, 8ºB.",
-			"cp": "33402",
-			"city": "Avilés",
-			"province": "Asturias",
+			"address2": "33402 - Avilés (Asturias)",
 			"mobile_phone": "+34 675465536",
 			"mail": "carlosgallardo@hotmail.es",
 			"web": "es.linkedin.com/pub/carlos-gallardo-rama/58/816/920/"
 		},
 		"experience": 
 		{
-			"name": "Experiencia Laboral",
+			"name": "EXPERIENCIA LABORAL",
 			"work_experience" : 
 			[
 				{
@@ -51,18 +49,18 @@
 		},
 		"education": 
 		{
-			"name": "Educación",
+			"name": "EDUCACIÓN",
 			"instead_studies": 
 			[
-				{"name": "Ingeniería Informática en la Universidad Politécnica de Madrid"},
-				{"name": "Quinto curso realizado en Linköping Universitet (Suecia)."},
-				{"name": "Proyecto Fin de Carrera: CHINAPP: Aplicación Web generadora de aplicación móvil multilenguaje para el aprendizaje de chino."}
+				{"study": "Ingeniería Informática en la Universidad Politécnica de Madrid"},
+				{"study": "Quinto curso realizado en Linköping Universitet (Suecia)."},
+				{"study": "Proyecto Fin de Carrera: CHINAPP: Aplicación Web generadora de aplicación móvil multilenguaje para el aprendizaje de chino."}
 			]
 		},
 		"course": 
 		{
-			"name": "Cursos",
-			"subjet": 
+			"name": "CURSOS",
+			"subject": 
 			[
 				{"name": "Hibernate", "duration" : "30", "type_duration": "h", "year": "2013", "school": "SUNION"},
 				{"name": "J2EE EJB3", "duration" : "30", "type_duration": "h", "year": "2013", "school": "SUNION"},
@@ -74,7 +72,7 @@
 		},
 		"language" : 
 		{
-			"name": "Idiomas",
+			"name": "IDIOMAS",
 			"idiom": 
 			[
 				{"name": "Inglés", "description": "Nivel alto leído, nivel medio escrito y hablado."},
@@ -85,6 +83,53 @@
 	},
 	{
 		"id": "curriculum_tecnico",
-		"name": "Curriculum Técnico"
- 	}
+		"name": "Curriculum Técnico",
+		"personal_information" : 
+		{
+			"name": "INFORMACIÓN PERSONAL",
+			"birthday" : "9 de julio de 1984",
+			"address": "Calle del Muelle, 34, 8ºB.",
+			"address2": "33402 - Avilés (Asturias)",
+			"mobile_phone": "+34 675465536",
+			"mail": "carlosgallardo@hotmail.es",
+			"web": "es.linkedin.com/pub/carlos-gallardo-rama/58/816/920/"
+		},
+		"specific_knowledge" :
+		{
+			"name": "CONOCIMIENTOS ESPECÍFICOS",
+			"knowledge" : [
+			   {"type_knowledge": "Programación en lenguaje Java", "description": "Experiencia adquirida trabajando para varios proyectos en los últimos tres años bajo distintas distribuciones de Java (desde Java 1.4 a Java 1.7)"},
+			   {"type_knowledge": "Programación en lenguaje Java", "description": "Desarrollo con EJB3 e HIBERNATE. 2 años de experiencia."},
+			   {"type_knowledge": "Programación en lenguaje Java", "description": "Programación web con JSP, HTML5 y CSS3. 3 años de experiencia."},
+			   {"type_knowledge": "Programación en lenguaje Java", "description": "Uso de Maven para la generación de proyectos Java. 4 años de experiencia."},
+			   {"type_knowledge": "Programación en lenguaje Java", "description": "En la creación de formularios alto conocimiento en JasperReports. 1 año y medio de experiencia."},
+			   {"type_knowledge": "Frameworks de programación", "description": "AngularJS: Para el desarrollo de una aplicación web end-to-end. 1 año y medio de experiencia."},
+			   {"type_knowledge": "Frameworks de programación", "description": "Spring: Para la gestión y modelización de proyectos web. 3 años de experiencia."},
+			   {"type_knowledge": "Heramientas de calidad y gestión de proyectos", "description": "Heramientas de calidad y gestión de proyectos:"},
+			   {"type_knowledge": "Heramientas de calidad y gestión de proyectos", "description": "SonarQube: para el control de calidad de cobertura de código. 1 año de experiencia."},
+			   {"type_knowledge": "Heramientas de calidad y gestión de proyectos", "description": "JUNITS: Pruebas unitarias de caja blanca y caja negra. 3 años de experiencia. "},
+			   {"type_knowledge": "Heramientas de calidad y gestión de proyectos", "description": "Karma: para el testeo de aplicaciones bajo Angularjs. "},
+			   {"type_knowledge": "Heramientas de calidad y gestión de proyectos", "description": "Redmine: para la gestión de tareas, incidencias y recursos de proyectos. 2 años de experiencia. "},
+			   {"type_knowledge": "Heramientas de calidad y gestión de proyectos", "description": "Jira: gestión de incidencias y de tareas en el desarrollo software. 2 años de experiencia."},
+			   {"type_knowledge": "Metodologías", "description": "Diseño orientado a objetos. "},
+			   {"type_knowledge": "Metodologías", "description": "Análisis estructurado. "},
+			   {"type_knowledge": "Metodologías", "description": "Metodologías de seguimientos de proyectos TSP. "},
+			   {"type_knowledge": "Metodologías", "description": "Scrum (modelo de desarrollo ágil). 2 años de experiencia."},
+			   {"type_knowledge": "Estructuras de datos", "description": "Análisis, diseño y especificación de tipo de datos abstractos. "},
+			   {"type_knowledge": "Estructuras de datos", "description": "Programación de estructuras de datos en entornos de concurrencia."},
+			   {"type_knowledge": "Bases de datos", "description": "Desarrollo con bases de datos MySQL, PostgreSQL y Oracle. "},
+			   {"type_knowledge": "Bases de datos", "description": "Mantenimiento de datos en un DWH con Business Object en Oracle 11. "},
+			   {"type_knowledge": "Bases de datos", "description": "Uso de Business Intelligent para la creación de informes. Servidores: "},
+			   {"type_knowledge": "Servidores", "description": "Servidor HTTP Apache para el mantenimiento de procesos Java, tanto para tareas batch como para proyectos Online. "},
+			   {"type_knowledge": "Servidores","description": "Servidor Jboss para el mantenimiento de procesos Java, tanto para tareas batch como para proyectos Online. "},
+			   {"type_knowledge": "Servidores","description": "Servidor Jboss en desarrollos de aplicaciones web y de procesos batch. (versiones utilizadas Jboss 5.5 y eap 7). 4 años de experiencia. "},
+			   {"type_knowledge": "Servidores","description": "Servidor GRUNT: Para el desarrollo de aplicaciones end-to-end bajo el framework Angularjs mantenido por Google Inc. "},
+			   {"type_knowledge": "Proyectos personales","description": "Desarrollo de un gestor de Bancos de Tiempo bajo el producto Cyclos 3.7 (http://www.cyclos.org/): o Uso de Hibernate, Strut, servidor Apache y MySQL en una máquina con sistema Windows server 2008 R2."},
+			   {"type_knowledge": "Programación Móvil", "description": "Aplicación para el Aprendizaje de idiomas asistido con dispositivos móviles Android "},
+			   {"type_knowledge": "Programación Móvil", "description": "Programación en Android bajo el SDK de Android."},
+			   {"type_knowledge": "Sistemas operativos", "description": "Windows 7/8/server 2003/server 2008 r2 "},
+			   {"type_knowledge": "Sistemas operativos", "description": "Unix: Solaris/Ubuntu/Suse/Mint"}
+		]
+		}
+	}
 ]

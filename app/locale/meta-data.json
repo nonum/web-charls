@@ -6,65 +6,91 @@
 			{
 				"entity" : "personal_information",
 				"active": "true",
-				"type": "simple_field",
+				"picture": "/images/photo.png",
+				"type": "simple-field",
 				"fields": [
-					{ "name": "birthday", "type": "date", "label": "curriculum.label.birthday", "order": "1"},
+					{ "name": "birthday", "type": "string", "label": "curriculum.label.birthday", "order": "1"},
 					{ "name": "address", "type": "string", "label": "curriculum.label.address","order": "2"},
-					{ "name": "cp", "type": "string", "label": "curriculum.label.cp","order": "3"},
-					{ "name": "city", "type": "string", "label": "curriculum.label.city","order": "4"},
-					{ "name": "province", "type": "string", "label": "curriculum.label.province","order": "5"},
+					{ "name": "address2", "type": "string", "label": "","order": "3"},
 					{ "name": "mobile_phone", "type": "number", "label": "curriculum.label.mobile_phone","order": "6"},
 					{ "name": "mail", "type": "mail", "label": "curriculum.label.mail","order": "7"},
 					{ "name": "web", "type": "link", "label": "curriculum.label.web","order": "8"}
 				]	
 			},
 			{
-				"entity" : "experience",
+				"entity": "experience",
 				"active": "true",
-				"type": "complex_list",
+				"type": "complex-list",
 				"fields": [
-					{   
-						"name": [ "company", "client" ], 
-						"type": "complex", 
-						"subname": { "name": [ "start_date", "end_date" ], "type": "date" },
-						"order": "1"
-					},
-					{  
-						"name": "description", 
-						"type": "string",
-						"order": "1"
+					{ 
+					  "name": "work_experience",
+					  "type": "complex-field",
+					  "fields" : [
+							{   
+								"label": "curriculum.expirence.title",
+								"type": "complex-label", 
+								"order": "1"
+							},
+							{  
+								"name": "description", 
+								"type": "simple",
+								"order": "1"
+							}
+						]
 					}
 				]
 			},
 			{
 				"entity" : "education",
 				"active": "true",
-				"type": "simple_list",
+				"type": "simple-list",
 				"fields": [
 					{ 
-						"name": "instead_studies", "type": "repeat_string", "order": "1"
+						"name": "instead_studies",
+						"type": "simple-field", 
+						"fields": [
+							{ "name": "study", "type": "string" }
+						],
+						"order": "1"
 					}
-				]
+				]				
 			},
 			{
 				"entity" : "course",
 				"active": "true",
-				"type": "group_list",
-				"group" : "school",
+				"type": "group-list",
 				"fields": [
 					{   
-						"name" : "name",
-						"subname": { "name": [ "duration", "year" ], "type": "date_h" },
-						"order": "1"
+						"name" : "subject",
+						"type": "complex-field",
+						"group" : "school",
+						"fields": [
+							{
+								"label": "curriculum.course.description",
+								"type": "complex-label", 
+								"order": "1"
+							}
+						]
 					}
 				]
 			},
 			{
 				"entity" : "language",
 				"active": "true",
-				"type": "simple_list",
+				"type": "simple-list",
 				"fields": [
-					{ "name": "birday", "type": "repeat_string", "order": "1"}
+					{ 
+					  "name": "idiom",
+					  "type": "complex-field", 
+					  "fields": [
+					  	{
+					  		"label": "curriculum.language.description",
+							"type": "complex-label", 
+							"order": "1"
+						}
+					  ],
+					  "order": "1"
+					}			
 				]
 			}
 
@@ -73,6 +99,39 @@
 	{
 		"name" : "curriculum_tecnico",
 		"sub_sections": [
+			{
+				"entity" : "personal_information",
+				"active": "true",
+				"picture": "/images/photo.png",
+				"type": "simple-field",
+				"fields": [
+					{ "name": "birthday", "type": "string", "label": "curriculum.label.birthday", "order": "1"},
+					{ "name": "address", "type": "string", "label": "curriculum.label.address","order": "2"},
+					{ "name": "address2", "type": "string", "label": "","order": "3"},
+					{ "name": "mobile_phone", "type": "number", "label": "curriculum.label.mobile_phone","order": "6"},
+					{ "name": "mail", "type": "mail", "label": "curriculum.label.mail","order": "7"},
+					{ "name": "web", "type": "link", "label": "curriculum.label.web","order": "8"}
+				]	
+			},
+			{
+				"entity": "specific_knowledge",
+				"active": "true",
+				"type": "group-list",
+				"fields": [
+					{   
+						"name" : "knowledge",
+						"type": "complex-field",
+						"group" : "type_knowledge",
+						"fields": [
+							{
+								"label": "curriculum.knowledge.description",
+								"type": "complex-label", 
+								"order": "1"
+							}
+						]
+					}
+				]
+			}
 		]
 	}
 ],

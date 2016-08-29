@@ -1,0 +1,10 @@
+<lu>
+	<li ng-repeat="raw in entity[field.name]">
+		<info-raw 
+			ng-repeat="fie in field.fields"			
+			entity="raw"
+			field="fie"
+			type="field.type"
+		</info-raw>
+	</li>
+</lu>

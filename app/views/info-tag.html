@@ -4,9 +4,7 @@
 	</li>
 </ul>
 <div class="tab-content">
-	<div id="section.id" ng-repeat="section in metaData | filter : { name : selectionActive }">
-		<div id="field.entity" ng-repeat="field in section.sub_sections">
-			<info-section entity="entityRaw" meta-data="field"></info-section>
-		</div>
+	<div id="field.entity" ng-repeat="field in metaDataRaw.sub_sections">
+		<info-section entity="entityRaw" meta-data="field"></info-section>
 	</div>
 </div>

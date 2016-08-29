@@ -19,7 +19,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.bootstrap',
-    'pascalprecht.translate'
+    'pascalprecht.translate',
+    'angular.filter'
   ])
   .config(['$routeProvider','$translateProvider', function ($routeProvider,$translateProvider) {
     $routeProvider

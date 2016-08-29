@@ -1,0 +1,9 @@
+<h3>
+	<strong>{{ raw.label | translate }} </strong> 
+	<spam ng-if="raw.type == 'string' || raw.type == 'number'">
+		{{ raw.value }}
+	</spam>
+	<a ng-if="raw.type == 'link' || raw.type == 'mail'" href="{{raw.value}}">
+		{{ raw.value }}
+	</a>
+</h3>

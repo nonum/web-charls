@@ -20,9 +20,11 @@ angular.module('webAppApp')
  		controller : function ($scope,$filter) {
 
 			$scope.entityRaw = $filter('filter')($scope.entities, { id: $scope.sectionActive})[0];
+			$scope.metaDataRaw = $filter('filter')($scope.metaData, { name: $scope.sectionActive})[0];
  			$scope.clickSection = function(section) {
  				$scope.sectionActive = section;
  				$scope.entityRaw = $filter('filter')($scope.entities, { id: $scope.sectionActive})[0];
+ 				$scope.metaDataRaw = $filter('filter')($scope.metaData, { name: $scope.sectionActive})[0];
  			};
  		}
  	};

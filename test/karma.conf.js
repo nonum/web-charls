@@ -24,6 +24,7 @@ module.exports = function(config) {
       'bower_components/angular/angular.js',
       'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js',
       'bower_components/bootstrap/dist/js/bootstrap.js',
+      'bower_components/angular-filter/dist/angular-filter.js',
       'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
       'bower_components/angular-animate/angular-animate.js',
       'bower_components/angular-aria/angular-aria.js',

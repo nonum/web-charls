@@ -26,7 +26,9 @@
       </div>
 
       <div class="container-fluid">
-        <div ng-view=""></div>
+        <div class="col-md-offset-1 col-md-10">
+          <div ng-view=""></div>
+        </div>
       </div>
 
       <div class="footer">
@@ -53,6 +55,7 @@
      <script src="bower_components/angular/angular.js"></script>
      <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
      <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+     <script src="bower_components/angular-filter/dist/angular-filter.js"></script>
      <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
      <script src="bower_components/angular-animate/angular-animate.js"></script>
      <script src="bower_components/angular-aria/angular-aria.js"></script>
@@ -84,6 +87,7 @@
      <script src="scripts/directives/info-tag.js"></script>
      <script src="scripts/constants.js"></script>
 
+     <script src="scripts/filters/group-filter.js"></script>
      <!-- endbuild -->
    </body>
    </html>
