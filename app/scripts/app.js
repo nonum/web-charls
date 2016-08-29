@@ -83,4 +83,17 @@ angular
 
       // Setting up french as default
       $translateProvider.preferredLanguage('es');
+
+      
+
+  }])
+  .run(['$rootScope', 'locale', function($rootScope, locale) {
+  
+      locale.get('meta-data').then(function (msg) {
+        $rootScope.metaData = msg.data;
+      });
+
+      locale.get('entities').then(function (msg) {
+        $rootScope.entities = msg.data;
+      });
   }]);
