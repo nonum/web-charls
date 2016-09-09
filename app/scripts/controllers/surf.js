@@ -8,10 +8,8 @@
  * Controller of the webAppApp
  */
 angular.module('webAppApp')
-  .controller('SurfCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('SurfCtrl',[ '$scope', function ($scope) {
+   	 
+   	 $scope.theBestVideo = '3TFmZnL6how';
+
+  }]);

@@ -149,5 +149,29 @@
 			"web": "es.linkedin.com/pub/carlos-gallardo-rama/58/816/920/"
 		}
 	}
+],
+"surf": [
+	{
+		"id": "salinas",
+		"name": "Salinas",
+		"youtube": 
+		{
+			"name": "WebCams",
+			"videos": [
+				{ "cam": "3TFmZnL6how" },
+				{ "cam": "9ko7WIuqtL4" }
+			],
+			"imgVideo" : [
+				{ "cam": "nan" }
+			]
+
+		},			
+		"aemet": {
+			"name": "El tiempo"
+		},
+		"windguru": {
+			"name": "Oleaje"
+		}
+	}
 	]
 }

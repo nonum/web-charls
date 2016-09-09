@@ -20,7 +20,8 @@ angular
     'ngTouch',
     'ui.bootstrap',
     'pascalprecht.translate',
-    'angular.filter'
+    'angular.filter',
+    'youtube-embed'
   ])
   .config(['$routeProvider','$translateProvider', function ($routeProvider,$translateProvider) {
     $routeProvider
@@ -96,4 +97,9 @@ angular
       locale.get('entities').then(function (msg) {
         $rootScope.entities = msg.data;
       });
+
+      var tag = document.createElement('script');
+      tag.src = "http://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
   }]);

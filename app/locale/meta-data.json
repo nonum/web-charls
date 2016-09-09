@@ -156,7 +156,43 @@
 			}
 		]
 	}
+],
+"surf": [
+	{
+		"name": "salinas",
+		"sub_sections": [
+			{	
+				"entity": "youtube",
+				"active": "true",
+				"type": "simple-list",
+				"fields": [
+					{ 
+						"name": "videos",
+						"type": "youtube", 
+						"fields": [
+							{"name": "cam"}
+						]
+					},
+					{
+						"name": "imgVideo",
+						"type": "img-video",
+						"fields": [
+							{"name": "cam"}
+						]
+						
+					}			
+				]
+			},
+			{	
+				"entity": "aemet",
+				"active": "true"
+			},
+			{	
+				"entity": "windguru",
+				"active": "true"
+			}
+		]
+	}
 ]
-
 }
 

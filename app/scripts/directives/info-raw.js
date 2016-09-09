@@ -71,6 +71,12 @@
  				case 'group-list':
  				case 'simple-list':
  				break;
+ 				case 'youtube':
+ 					$scope.theBestVideo = $scope.entity.cam;
+ 					$scope.playerVars = {
+    					autoplay: 1
+					};
+ 				break;
 
 			};
  				
