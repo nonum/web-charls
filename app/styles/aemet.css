@@ -1,0 +1,32 @@
+.page-wrap {
+  -ms-touch-action: pan-y;
+  -ms-overflow-style: none !important;
+  width: 2500px; // required for H scrolling
+}
+
+.horizontal-slide {
+  white-space: nowrap;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.horizontal-slide .item .item2 {
+  display: inline-block;
+  float: none;
+}
+
+.item { 
+  background-color: #4875B9;
+
+}
+
+.item2 { 
+  background-color: #1875A9;
+  width: 50px;
+  height: 25px;
+  margin: 2px;
+}
+
+.item.selected {
+  background-color: red !important;
+}

@@ -162,6 +162,17 @@
 		"name": "salinas",
 		"sub_sections": [
 			{	
+				"entity": "aemet",
+				"active": "true",
+				"type": "aemet",
+				"fields": [
+					{
+						"name": "aemet",
+						"type": "aemet"
+					}
+				]
+			},
+			{	
 				"entity": "youtube",
 				"active": "true",
 				"type": "simple-list",
@@ -183,10 +194,7 @@
 					}			
 				]
 			},
-			{	
-				"entity": "aemet",
-				"active": "true"
-			},
+			
 			{	
 				"entity": "windguru",
 				"active": "true"

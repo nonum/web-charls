@@ -7,7 +7,7 @@
  * # infoRaw
  */
  angular.module('webAppApp')
- .directive('infoRaw', function ($filter,$compile) {
+ .directive('infoRaw', function ($filter,$compile,$http, x2js) {
  	return {
  		 link: function(scope, element, attrs){
 
@@ -76,6 +76,20 @@
  					$scope.playerVars = {
     					autoplay: 1
 					};
+				break;
+ 				case 'aemet':
+ 					// $http.get("http://www.aemet.es/xml/municipios_h/localidad_h_33004.xml",{
+ 					$http.get("locale/localidad_h_33004.xml",{
+						transformResponse: function (cnv) {
+						  
+						  var aftCnv = x2js.xml_str2json(cnv);
+						  return aftCnv;
+						}
+					}).success(function (response) {
+						console.log(response);
+						$scope.root = response.root; 
+					});
+
  				break;
 
 			};

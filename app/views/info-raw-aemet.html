@@ -1,0 +1,11 @@
+<div class="horizontal-slide">
+    <div ng-repeat="dia in root.prediccion.dia" class="item col-md-12" ng-class="{selected: item.selected}" ng-click="click(item.id)">
+		{{dia._fecha | date:'EEEE'}}
+		<div ng-repeat="hour in dia.estado_cielo" class="item2">
+			{{hour._periodo}}
+		</div>
+		<div ng-repeat="hour in dia.estado_cielo" class="item2">
+			{{hour._periodo}}
+		</div>
+	</div>
+</div>

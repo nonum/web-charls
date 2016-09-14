@@ -21,7 +21,8 @@ angular
     'ui.bootstrap',
     'pascalprecht.translate',
     'angular.filter',
-    'youtube-embed'
+    'youtube-embed',
+    'cb.x2js'
   ])
   .config(['$routeProvider','$translateProvider', function ($routeProvider,$translateProvider) {
     $routeProvider
