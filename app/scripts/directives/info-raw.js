@@ -87,7 +87,8 @@
 						}
 					}).success(function (response) {
 						console.log(response);
-						$scope.root = response.root; 
+						console.log($scope.field);
+						$scope.prediccion = response.root.prediccion; 
 					});
 
  				break;

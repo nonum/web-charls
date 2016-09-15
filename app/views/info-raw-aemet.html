@@ -1,11 +1,18 @@
 <div class="horizontal-slide">
-    <div ng-repeat="dia in root.prediccion.dia" class="item col-md-12" ng-class="{selected: item.selected}" ng-click="click(item.id)">
-		{{dia._fecha | date:'EEEE'}}
-		<div ng-repeat="hour in dia.estado_cielo" class="item2">
-			{{hour._periodo}}
-		</div>
-		<div ng-repeat="hour in dia.estado_cielo" class="item2">
-			{{hour._periodo}}
-		</div>
-	</div>
+    <table class="page-wrap">
+    	<tr>
+    		<td ng-repeat="day in prediccion.dia" class="item">
+    			{{day._fecha | date:'EEE dd'}}
+    			<table>
+                    <tr>
+                        <td ng-repeat="(iter,key) in day.estado_cielo" class="item2">
+                            <div ng-repeat="area in field.area">
+                                {{ day[area.name][iter].__text}}</br>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
 </div>
