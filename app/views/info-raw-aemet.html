@@ -7,9 +7,15 @@
                     <tr>
                         <td ng-repeat="(iter,key) in day.estado_cielo" class="item2">
                             <div ng-repeat="area in field.area">
-                                {{ day[area.name][iter].__text}}</br>
+                                <info-raw-aemet type="image"></info-raw-aemet> 
+                                <img src="images/{{day.estado_cielo[iter].__text}}.png"></img>
                             </div>
                         </td>
+                       <!--  <td ng-repeat="(iter,key) in day.estado_cielo" class="item2">
+                            <div ng-repeat="area in field.area">
+                                  {{ day[area.name][iter].__text}}</br>
+                            </div>
+                        </td> -->
                     </tr>
                 </table>
             </td>
