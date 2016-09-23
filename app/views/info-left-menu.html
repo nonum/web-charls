@@ -1,16 +1,15 @@
-<div class="sidebar-nav">
-	<div class="navbar navbar-default">
-		
-		<div class="collapse navbar-collapse" id="js-navbar-collapse2">
-			<ul class="nav navbar-nav">
-				<li class="col-md-12" ng-repeat="field in fields" class="{{ menu.active ? 'active' : '' }}">
-					<a href="" class="collapsed">
-						<h4>
-							{{entity[field.entity].name}} 
-						</h4>
-					</a>
-				</li>
-			</ul>
-		</div>
-	</div>
+<div class="sidebar-nav hidden-xs-down">
+<div class="navbar navbar-default navbar-inverse" style="position: fixed; cursor: pointer;">
+	<ul class="nav navbar-nav">
+		<li data-target="informacion_personal" ng-repeat="field in fields">
+			<a ng-click="gotoAnchor(field.entity)">
+				<h6>
+					{{entity[field.entity].name}} 
+				</h6>
+			</a>
+		</li>
+	</ul>
 </div>
+</div>
+
+

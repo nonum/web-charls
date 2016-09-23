@@ -1,7 +1,7 @@
 .page-wrap {
   -ms-touch-action: pan-y;
   -ms-overflow-style: none !important;
-  width: 2600px; 
+  width: 2500px; 
 }
 
 .horizontal-slide {
@@ -12,24 +12,93 @@
 
 .item .item2 {
   display: inline-table;
+  margin: 0px;
+  padding: 0px;
   
 }
 
 
 .item { 
-
-  margin: 1px;
+  margin: 0px;
+  padding: 0px;
+}
+.no-padding {
+  margin: 0px;
+  padding: 0px;
 }
 
 .item2 { 
-
   text-align: center;
   float: left;
   width: 50px;
   height: 25px;
-  margin: 2px;
+  margin: 0px;
+  padding: 0px;
 }
 
-.item.selected {
-  background-color: red !important;
+
+.image { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
+    margin: 0px;
+    padding: 0px;
+}
+
+.text-image {
+    position: absolute;
+    text-align: center;
+    left: 0px;
+    top: 1px;
+}
+
+/* make sidebar nav vertical */ 
+@media (min-width: 768px) {
+  .sidebar-nav .navbar .navbar-collapse {
+    padding: 0;
+    max-height: none;
+  }
+  .sidebar-nav .navbar ul {
+    float: none;
+  }
+  .sidebar-nav .navbar ul:not {
+    display: block;
+  }
+  .sidebar-nav .navbar li {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+
+* {font-family: 'Segoe UI'; font-size: 10pt;}
+.circle {
+  position: relative; 
+  border: 2px solid #999; 
+  border-radius: 100%; 
+  width: 50px; 
+  line-height: 50px; 
+  text-align: center; 
+  margin-top: 50px; 
+  background-color: 
+  #fff; z-index: 2;
+}
+.circle:first-child {
+  margin-top: 0;
+}
+.circle:before {
+  position: absolute; 
+  border: 1px solid #999; 
+  width: 0; height: 50px; 
+  display: block; content: ''; 
+  left: 50%; z-index: 1; 
+  top: -54px; 
+  margin-left: -1px;
+}
+.circle:first-child:before {display: none;}
+
+.body-view {
+  padding-top: 70px;
 }

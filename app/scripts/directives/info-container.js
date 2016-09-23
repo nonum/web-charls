@@ -19,7 +19,9 @@
  		},
  		controller : function ($scope) {
 
-
+ 			$scope.$on('myCustomEvent', function (event, data) {
+  				$scope.$broadcast('myCustomEvent2', { someProp: data });
+			});
  		}
  	};
  });

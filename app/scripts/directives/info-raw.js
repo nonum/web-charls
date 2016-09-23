@@ -31,8 +31,6 @@
 
  			$scope.oneAtATime = false;
 
-			var a = $filter('translate')('curriculum.label.cp');
-
 			$scope.getComplexField = function(name){
 				var title = '';
 				angular.forEach($scope.field[name], function(item){
@@ -79,6 +77,8 @@
 				break;
  				case 'aemet':
  					// $http.get("http://www.aemet.es/xml/municipios_h/localidad_h_33004.xml",{
+ 					if(!$scope.prediccion) {
+ 					
  					$http.get("locale/localidad_h_33004.xml",{
 						transformResponse: function (cnv) {
 						  
@@ -86,15 +86,61 @@
 						  return aftCnv;
 						}
 					}).success(function (response) {
+						/*var mayorQue = function(actual,expected) {
+							var a = 0;
+						};*/
 						console.log(response);
 						console.log($scope.field);
 						$scope.prediccion = response.root.prediccion; 
+						
+						var dateNow = new Date();
+						angular.forEach($scope.field.area, function(item) {
+							$scope.prediccion.dia[0][item.name] = $filter('hourFromNow')($scope.prediccion.dia[0][item.name]); 
+						});
+						var items = [];
+						var first;
+						var last;
+						angular.forEach($scope.prediccion.dia, function(day) {
+							var entityOrder = $filter('orderBy')(day.temperatura, '__text');
+							var firstAux = entityOrder[0];
+    						var lastAux = entityOrder[entityOrder.length-1];
+							if(first !== undefined) {
+								if(first.__text > firstAux.__text) {
+									first = firstAux;
+								}
+							} else {
+								first = firstAux;
+							}
+							if(last !== undefined) {
+								if(last.__text < lastAux.__text) {
+									last = lastAux;
+								}
+							} else {
+								last = lastAux;
+							}
+						});
+   					
+    					for(var i = last.__text; i >= first.__text; i--){
+      						items.push(i);
+						}
+						$scope.infoEntity = {
+							items: items
+						};
+						
 					});
-
+				}
  				break;
-
 			};
  				
+
+			/** Esta función se puede usar como comparator en el filter **/
+   			$scope.comparator = function(actual, expected) {
+     			if (normalize(actual).indexOf(normalize(expected))>=0) {
+          			return true;
+        		} else {
+          			return false;
+        		}
+    		};
 
  			$scope.status = {
  				isCustomHeaderOpen: false,

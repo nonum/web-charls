@@ -8,7 +8,7 @@
  * Controller of the webAppApp
  */
 angular.module('webAppApp')
-  .controller('NavHeaderCtrl', ['$scope', function ($scope) {
+  .controller('NavHeaderCtrl', ['$scope', '$rootScope', function ($scope, $rootScope) {
     
     $scope.nav = [{ name: 'Curriculum', route: 'curriculum', icon: 'glyphicon glyphicon-user'},
     { name: 'Desarrollo', route: 'development', icon: 'glyphicon glyphicon-console'},
@@ -16,7 +16,10 @@ angular.module('webAppApp')
     { name: 'Contacto', route: 'contact', icon: 'glyphicon glyphicon-envelope'}];
 
 
-     $scope.isActive = function (viewLocation) { 
-        return viewLocation === $location.path();
+    $scope.isActive = function (viewLocation) { 
+    	return viewLocation === $location.path();
+    };
+    $scope.changeTab = function () { 
+        $rootScope.sectionActive = null;
     };
   }]);

@@ -22,6 +22,8 @@ angular.module('webAppApp')
 			$scope.entityRaw = $filter('filter')($scope.entities, { id: $scope.sectionActive})[0];
 			$scope.metaDataRaw = $filter('filter')($scope.metaData, { name: $scope.sectionActive})[0];
  			$scope.clickSection = function(section) {
+ 				// firing an event upwards
+				$scope.$emit('myCustomEvent', section);
  				$scope.sectionActive = section;
  				$scope.entityRaw = $filter('filter')($scope.entities, { id: $scope.sectionActive})[0];
  				$scope.metaDataRaw = $filter('filter')($scope.metaData, { name: $scope.sectionActive})[0];

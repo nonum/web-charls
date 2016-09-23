@@ -171,17 +171,13 @@
 						"type": "aemet",
 						"iterator": "_periodo",
 						"area" :[
-							{ "name": "estado_cielo" , "data": [  "_periodo", "__text" ]},
-							{ "name": "humedad_relativa" , "data": [ "__text" ]},
-							{ "name": "nieve", "data": [ "__text" ]},
-							{ "name": "precipitacion", "data": [ "__text" ]},
-							{ "name": "prob_nieve" , "data": [ "__text" ]},
-							{ "name": "prob_precipitacion" , "data": [ "__text" ]},
-							{ "name": "prob_tormenta", "data": [ "__text" ]},
-							{ "name": "racha_max", "data": [ "__text" ]},
-							{ "name": "sens_termica" , "data": [ "__text" ]},
-							{ "name": "temperatura", "data": [ "__text" ]},
-							{ "name": "viento" , "data": [ "__text" ]}
+							{ "name": "estado_cielo" , "value": "_periodo", "img": "_periodo", "type": "aemet-image"},
+							{ "name": "estado_cielo" , "value": "", "img": "__text", "type": "aemet-image"},
+							{ "name": "viento" , "value": "direccion", "type": "simple-field", "text": "velocidad"},
+							{ "name": "viento" , "value": "velocidad", "img": "direccion", "type": "aemet-image", "text": "velocidad"},
+							{ "name": "racha_max" , "value": "__text",  "type": "simple-field","text": "__text"},
+							{ "name": "temperatura" , "value": "__text",  "type": "table-graphic","text": "__text"}
+								
 						]
 					}
 				]

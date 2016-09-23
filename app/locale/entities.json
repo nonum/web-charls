@@ -156,7 +156,7 @@
 		"name": "Salinas",
 		"youtube": 
 		{
-			"name": "WebCams",
+			"name": "WEB CAMS",
 			"videos": [
 				{ "cam": "3TFmZnL6how" },
 				{ "cam": "9ko7WIuqtL4" }
@@ -167,10 +167,10 @@
 
 		},			
 		"aemet": {
-			"name": "El tiempo"
+			"name": "EL TIEMPO"
 		},
 		"windguru": {
-			"name": "Oleaje"
+			"name": "OLEAJE"
 		}
 	}
 	]

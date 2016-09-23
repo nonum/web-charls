@@ -22,7 +22,8 @@ angular
     'pascalprecht.translate',
     'angular.filter',
     'youtube-embed',
-    'cb.x2js'
+    'cb.x2js',
+    'mgcrea.ngStrap.helpers.dimensions'
   ])
   .config(['$routeProvider','$translateProvider', function ($routeProvider,$translateProvider) {
     $routeProvider

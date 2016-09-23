@@ -37,6 +37,8 @@ module.exports = function(config) {
       'bower_components/angular-sanitize/angular-sanitize.js',
       'bower_components/angular-touch/angular-touch.js',
       'bower_components/angular-youtube-mb/src/angular-youtube-embed.js',
+      'bower_components/angular-strap/dist/angular-strap.js',
+      'bower_components/angular-strap/dist/angular-strap.tpl.js',
       'bower_components/xml2json/xml2json.js',
       'bower_components/x2js/xml2json.min.js',
       'bower_components/angular-x2js/dist/x2js.min.js',
