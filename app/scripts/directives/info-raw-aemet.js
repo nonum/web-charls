@@ -49,7 +49,7 @@
     break;
     case 'table-graphic':
     
-      $scope.items = $scope.infoEntity.items;
+      $scope.items = $scope.infoEntity;
       $scope.raw = {
         value :   $scope.entity[$scope.iter][$scope.field.value]
       };

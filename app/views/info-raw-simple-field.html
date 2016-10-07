@@ -1,9 +1,9 @@
 <h3>
-	<strong>{{ raw.label | translate }} </strong> 
-	<spam ng-if="raw.type == 'string' || raw.type == 'number'">
-		{{ raw.value }}
+	<strong>{{ field.label | translate }} </strong> 
+	<spam ng-if="field.type == 'string' || field.type == 'number'">
+		{{ field.value }}
 	</spam>
-	<a ng-if="raw.type == 'link' || raw.type == 'mail'" href="{{raw.value}}">
-		{{ raw.value }}
+	<a ng-if="field.type == 'link' || field.type == 'mail'" href="{{field.value}}">
+		{{ field.value }}
 	</a>
 </h3>

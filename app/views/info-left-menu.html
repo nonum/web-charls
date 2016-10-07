@@ -1,15 +1,15 @@
-<div class="sidebar-nav hidden-xs-down">
-<div class="navbar navbar-default navbar-inverse" style="position: fixed; cursor: pointer;">
-	<ul class="nav navbar-nav">
-		<li data-target="informacion_personal" ng-repeat="field in fields">
-			<a ng-click="gotoAnchor(field.entity)">
-				<h6>
-					{{entity[field.entity].name}} 
-				</h6>
-			</a>
-		</li>
-	</ul>
-</div>
+<div class="sidebar-nav visible-desktop hidden-xs-down sample-show-hide" ng-show="checked">
+	<div class="navbar navbar-default navbar-inverse" style="position: fixed; cursor: pointer;">
+		<ul class="nav navbar-nav">
+     		<li ng-repeat="section in sections">
+				<a ng-click="gotoAnchor(section.id)">
+					<h6>
+						{{section.name}} 
+					</h6>
+				</a>
+			</li>
+		</ul>
+	</div>
 </div>
 
 

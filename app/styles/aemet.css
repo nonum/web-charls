@@ -1,7 +1,6 @@
 .page-wrap {
   -ms-touch-action: pan-y;
   -ms-overflow-style: none !important;
-  width: 2500px; 
 }
 
 .horizontal-slide {
@@ -30,7 +29,7 @@
 .item2 { 
   text-align: center;
   float: left;
-  width: 50px;
+  width: 35px;
   height: 25px;
   margin: 0px;
   padding: 0px;
@@ -101,4 +100,20 @@
 
 .body-view {
   padding-top: 70px;
+}
+
+::-webkit-scrollbar
+{
+  width: 9px;  /* for vertical scrollbars */
+  height: 9px; /* for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track
+{
+  background: rgba(0, 20, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb
+{
+  background: rgba(0, 0, 0, 0.5);
 }

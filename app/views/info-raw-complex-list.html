@@ -1,8 +1,8 @@
-<div ng-repeat="raw in entity[field.name]">
-	<info-raw 
-		ng-repeat="fie in field.fields"
-		entity="raw" 
-		field="fie"
-		type="field.type">
-	</info-raw>
-</div>
+<h3>
+<info-raw 
+	ng-repeat="field in fields"
+	item="item"
+	field="field"
+	type="field.type">
+</info-raw>
+</h3>

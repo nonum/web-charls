@@ -1,0 +1,498 @@
+{
+  "menu": [
+    {
+      "id": "curriculum",
+      "icon": "user",
+      "name": "Curriculum",
+      "tabs": [
+        "curriculum_vitae",
+        "curriculum_tecnico"
+      ]
+    },
+    {
+      "id": "development",
+      "icon": "console",
+      "name": "Desarrollo",
+      "tabs": []
+    },
+    {
+      "id": "surf",
+      "icon": "cloud",
+      "name": "Mareas",
+      "tabs": [
+        "salinas",
+        "gijon"
+      ]
+    },
+    {
+      "id": "contact",
+      "icon": "envelope",
+      "name": "Contacto",
+      "tabs": []
+    }
+  ],
+  "tab": [
+    {
+      "id": "curriculum_vitae",
+      "name": "Curriculum Vitae",
+      "sections": [
+        "personal_information",
+        "experience",
+        "education",
+        "course",
+        "language"
+      ]
+    },
+    {
+      "id": "curriculum_tecnico",
+      "name": "Curriculum Técnico",
+      "sections": [
+        "personal_information",
+        "specific_knowledge"
+      ]
+    },
+    {
+      "id": "salinas",
+      "name": "Salinas",
+      "sections": [
+        "aemet"
+      ]
+    },
+    {
+      "id": "blog",
+      "name": "BLOG",
+      "sections": []
+    }
+  ],
+  "section": [
+    {
+      "id": "personal_information",
+      "name": "INFORMACIÓN PERSONAL",
+      "picture": "photo.png",
+      "type": "simple-field",
+      "fields": [
+        {
+          "id": "birthday",
+          "value": "9 de julio de 1984",
+          "type": "string",
+          "label": "curriculum.label.birthday",
+          "order": 1
+        },
+        {
+          "id": "address",
+          "value": "Calle del Muelle, 34, 8ºB.",
+          "type": "string",
+          "label": "curriculum.label.address",
+          "order": 2
+        },
+        {
+          "id": "address2",
+          "value": "33402 - Avilés (Asturias)",
+          "type": "string",
+          "label": "",
+          "order": 3
+        },
+        {
+          "id": "mobile_phone",
+          "value": "+34 675465536",
+          "type": "number",
+          "label": "curriculum.label.mobile_phone",
+          "order": 4
+        },
+        {
+          "id": "mail",
+          "value": "carlosgallardo@hotmail.es",
+          "type": "mail",
+          "label": "curriculum.label.mail",
+          "order": 5
+        },
+        {
+          "id": "web",
+          "value": "es.linkedin.com/pub/carlos-gallardo-rama/58/816/920/",
+          "type": "link",
+          "label": "curriculum.label.web",
+          "order": 5
+        }
+      ]
+    },
+    {
+      "id": "experience",
+      "name": "EXPERIENCIA",
+      "type": "complex-list",
+      "fields": [
+        {
+          "id": "work_experience",
+          "value": null,
+          "type": "complex-field",
+          "style": "text-weight-bold",
+          "label": "curriculum.expirence.title",
+          "order": 1
+        },
+        {
+          "id": "work_experience",
+          "value": null,
+          "type": "complex-field",
+          "label": "curriculum.expirence.description",
+          "order": 2
+        }
+      ],
+      "list": [
+        {
+          "client": "SATEC",
+          "company": "BOYCOR",
+          "start_date": "21/12/2015",
+          "end_date": null,
+          "description": "Analista Desarrollador: Proyecto de desarrollo del sistema CRM y ERP de una compañía de telefónica e internet de Angola."
+        },
+        {
+          "client": "CSC",
+          "company": "EXPERIS",
+          "start_date": "08/07/2014",
+          "end_date": "18/12/2015",
+          "description": "Desarrollador: Proyecto de desarrollo de una plataforma web para una compañía de construcciones. Desarrollo en JAVA/J2EE, AngularJS, Javascript, Hibernate, Spring, Spring security, Spring MVC, Postgres, Grunt y Jboss."
+        },
+        {
+          "client": "Ferrovial",
+          "company": "CGI Group Inc.",
+          "start_date": "08/01/2014",
+          "end_date": "30/05/2014",
+          "description": "Programador Junior: Soporte en el área de mantenimiento en Ferrovial autopistas. Desarrollo en JAVA/J2EE, Hibernate, JSF, Jboss, máquinas UNIX."
+        },
+        {
+          "client": "YOIGO",
+          "company": "CGI Group Inc.",
+          "start_date": "24/10/2011",
+          "end_date": "07/01/2014",
+          "description": "Programador Junior (realizando funciones de Analista): Desarrollo de soluciones tecnológicas en las telecomunicaciones en JAVA/J2EE, en diferentes sistemas operativos y bases de datos (Oracle, Sybase, MySQL y SQLServer), máquinas Windows."
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "name": "EDUCACIÓN",
+      "type": "simple-list",
+      "fields": [
+        {
+          "id": "study",
+          "value": null,
+          "type": "complex-field",
+          "label": "curriculum.education.idiom",
+          "order": 1
+        }
+      ],
+      "list": [
+        {
+          "study": "Ingeniería Informática en la Universidad Politécnica de Madrid"
+        },
+        {
+          "study": "Quinto curso realizado en Linköping Universitet (Suecia)."
+        },
+        {
+          "study": "Proyecto Fin de Carrera: CHINAPP: Aplicación Web generadora de aplicación móvil multilenguaje para el aprendizaje de chino."
+        }
+      ]
+    },
+    {
+      "id": "course",
+      "name": "CURSOS",
+      "type": "group-list",
+      "group": "school",
+      "fields": [
+        {
+          "id": "subject",
+          "value": null,
+          "type": "complex-field",
+          "label": "curriculum.course.description",
+          "order": 1
+        }
+      ],
+      "list": [
+        {
+          "name": "Hibernate",
+          "duration": "30",
+          "type_duration": "h",
+          "year": "2013",
+          "school": "SUNION"
+        },
+        {
+          "name": "J2EE EJB3",
+          "duration": "30",
+          "type_duration": "h",
+          "year": "2013",
+          "school": "SUNION"
+        },
+        {
+          "name": "J2EE JSP",
+          "duration": "30",
+          "type_duration": "h",
+          "year": "2013",
+          "school": "SUNION"
+        },
+        {
+          "name": "Agilidad y Lean: Gestión de proyectos.",
+          "duration": "40",
+          "type_duration": "h",
+          "year": "2014",
+          "school": "MiriadaX"
+        },
+        {
+          "name": "Desarrollo de Aplicaciones en HTML5 y para Dispositivos Móviles Firefox O.S.",
+          "duration": "20",
+          "type_duration": "h",
+          "year": "2014",
+          "school": "MiriadaX"
+        },
+        {
+          "name": "Habilidades Sociales",
+          "duration": "24",
+          "type_duration": "h",
+          "year": "2013",
+          "school": "MAFOREM (Madrid Formación y Empleo"
+        }
+      ]
+    },
+    {
+      "id": "language",
+      "name": "IDIOMAS",
+      "type": "simple-list",
+      "fields": [
+        {
+          "id": "idiom",
+          "value": null,
+          "type": "complex-field",
+          "label": "curriculum.language.description",
+          "order": 1
+        }
+      ],
+      "list": [
+        {
+          "name": "Inglés",
+          "description": "Nivel alto leído, nivel medio escrito y hablado."
+        },
+        {
+          "name": "Chino",
+          "description": "Nivel HSK2."
+        },
+        {
+          "name": "Sueco",
+          "description": "Nociones básicas."
+        }
+      ]
+    },
+    {
+      "id": "specific_knowledge",
+      "name": "CONOCIMIENTOS ESPECÍFICOS",
+      "type": "group-list",
+      "group": "type_knowledge",
+      "fields": [
+        {
+          "id": "knowledge",
+          "value": null,
+          "type": "complex-field",
+          "label": "curriculum.knowledge.description",
+          "order": 1
+        }
+      ],
+      "list": [
+        {
+          "type_knowledge": "Programación en lenguaje Java",
+          "description": "Experiencia adquirida trabajando para varios proyectos en los últimos tres años bajo distintas distribuciones de Java (desde Java 1.4 a Java 1.7)"
+        },
+        {
+          "type_knowledge": "Programación en lenguaje Java",
+          "description": "Desarrollo con EJB3 e HIBERNATE. 2 años de experiencia."
+        },
+        {
+          "type_knowledge": "Programación en lenguaje Java",
+          "description": "Programación web con JSP, HTML5 y CSS3. 3 años de experiencia."
+        },
+        {
+          "type_knowledge": "Programación en lenguaje Java",
+          "description": "Uso de Maven para la generación de proyectos Java. 4 años de experiencia."
+        },
+        {
+          "type_knowledge": "Programación en lenguaje Java",
+          "description": "En la creación de formularios alto conocimiento en JasperReports. 1 año y medio de experiencia."
+        },
+        {
+          "type_knowledge": "Frameworks de programación",
+          "description": "AngularJS: Para el desarrollo de una aplicación web end-to-end. 1 año y medio de experiencia."
+        },
+        {
+          "type_knowledge": "Frameworks de programación",
+          "description": "Spring: Para la gestión y modelización de proyectos web. 3 años de experiencia."
+        },
+        {
+          "type_knowledge": "Heramientas de calidad y gestión de proyectos",
+          "description": "Heramientas de calidad y gestión de proyectos:"
+        },
+        {
+          "type_knowledge": "Heramientas de calidad y gestión de proyectos",
+          "description": "SonarQube: para el control de calidad de cobertura de código. 1 año de experiencia."
+        },
+        {
+          "type_knowledge": "Heramientas de calidad y gestión de proyectos",
+          "description": "JUNITS: Pruebas unitarias de caja blanca y caja negra. 3 años de experiencia. "
+        },
+        {
+          "type_knowledge": "Heramientas de calidad y gestión de proyectos",
+          "description": "Karma: para el testeo de aplicaciones bajo Angularjs. "
+        },
+        {
+          "type_knowledge": "Heramientas de calidad y gestión de proyectos",
+          "description": "Redmine: para la gestión de tareas, incidencias y recursos de proyectos. 2 años de experiencia. "
+        },
+        {
+          "type_knowledge": "Heramientas de calidad y gestión de proyectos",
+          "description": "Jira: gestión de incidencias y de tareas en el desarrollo software. 2 años de experiencia."
+        },
+        {
+          "type_knowledge": "Metodologías",
+          "description": "Diseño orientado a objetos. "
+        },
+        {
+          "type_knowledge": "Metodologías",
+          "description": "Análisis estructurado. "
+        },
+        {
+          "type_knowledge": "Metodologías",
+          "description": "Metodologías de seguimientos de proyectos TSP. "
+        },
+        {
+          "type_knowledge": "Metodologías",
+          "description": "Scrum (modelo de desarrollo ágil). 2 años de experiencia."
+        },
+        {
+          "type_knowledge": "Estructuras de datos",
+          "description": "Análisis, diseño y especificación de tipo de datos abstractos. "
+        },
+        {
+          "type_knowledge": "Estructuras de datos",
+          "description": "Programación de estructuras de datos en entornos de concurrencia."
+        },
+        {
+          "type_knowledge": "Bases de datos",
+          "description": "Desarrollo con bases de datos MySQL, PostgreSQL y Oracle. "
+        },
+        {
+          "type_knowledge": "Bases de datos",
+          "description": "Mantenimiento de datos en un DWH con Business Object en Oracle 11. "
+        },
+        {
+          "type_knowledge": "Bases de datos",
+          "description": "Uso de Business Intelligent para la creación de informes. Servidores: "
+        },
+        {
+          "type_knowledge": "Servidores",
+          "description": "Servidor HTTP Apache para el mantenimiento de procesos Java, tanto para tareas batch como para proyectos Online. "
+        },
+        {
+          "type_knowledge": "Servidores",
+          "description": "Servidor Jboss para el mantenimiento de procesos Java, tanto para tareas batch como para proyectos Online. "
+        },
+        {
+          "type_knowledge": "Servidores",
+          "description": "Servidor Jboss en desarrollos de aplicaciones web y de procesos batch. (versiones utilizadas Jboss 5.5 y eap 7). 4 años de experiencia. "
+        },
+        {
+          "type_knowledge": "Servidores",
+          "description": "Servidor GRUNT: Para el desarrollo de aplicaciones end-to-end bajo el framework Angularjs mantenido por Google Inc. "
+        },
+        {
+          "type_knowledge": "Proyectos personales",
+          "description": "Desarrollo de un gestor de Bancos de Tiempo bajo el producto Cyclos 3.7 (http://www.cyclos.org/): o Uso de Hibernate, Strut, servidor Apache y MySQL en una máquina con sistema Windows server 2008 R2."
+        },
+        {
+          "type_knowledge": "Programación Móvil",
+          "description": "Aplicación para el Aprendizaje de idiomas asistido con dispositivos móviles Android "
+        },
+        {
+          "type_knowledge": "Programación Móvil",
+          "description": "Programación en Android bajo el SDK de Android."
+        },
+        {
+          "type_knowledge": "Sistemas operativos",
+          "description": "Windows 7/8/server 2003/server 2008 r2 "
+        },
+        {
+          "type_knowledge": "Sistemas operativos",
+          "description": "Unix: Solaris/Ubuntu/Suse/Mint"
+        }
+      ]
+    },
+    {
+      "id": "aemet",
+      "name": "EL TIEMPO AEMET",
+      "type": "aemet-field",
+      "fields": [
+        {
+          "value": "http://localhost:9050/locale/localidad_h_33004.xml",
+          "type": "aemet",
+          "area": [
+            {
+              "id": "estado_cielo",
+              "value": "_periodo",
+              "img": "_periodo",
+              "type": "aemet-image"
+            },
+            {
+              "id": "estado_cielo",
+              "value": "",
+              "img": "__text",
+              "type": "aemet-image"
+            },
+            {
+              "id": "viento",
+              "value": "direccion",
+              "type": "simple-field",
+              "text": "velocidad"
+            },
+            {
+              "id": "viento",
+              "value": "velocidad",
+              "img": "direccion",
+              "type": "aemet-image",
+              "text": "velocidad"
+            },
+            {
+              "id": "racha_max",
+              "value": "__text",
+              "type": "simple-field",
+              "text": "__text"
+            },
+            {
+              "id": "temperatura",
+              "value": "__text",
+              "type": "table-graphic",
+              "text": "__text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "video_salinas",
+      "name": "WEBCAMS EN SALINAS",
+      "type": "video-field",
+      "fields": [
+        {
+          "value": "3TFmZnL6how",
+          "type": "youtube"
+        },
+        {
+          "value": "9ko7WIuqtL4",
+          "type": "youtube"
+        },
+        {
+          "value": "http://85.152.25.8:1229/mjpg/video.mjpg?timestamp=1473261014593",
+          "type": "img-video"
+        }
+      ]
+    },
+    {
+      "id": "windguru_salinas",
+      "name": "WINDGURU",
+      "type": "windguru"
+    }
+  ]
+}

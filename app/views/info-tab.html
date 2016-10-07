@@ -1,0 +1,23 @@
+<ul class="nav nav-tabs" ng-show="{{tabs.length > 1}}">
+	<li class="{{ tab.id == activeTabId ? 'active' : ''}}" ng-repeat="tab in tabs">
+		<a href="" ng-click="clickTab(tab.id)" id="tab.id">{{tab.name}}</a>
+	</li>
+</ul>
+<div class="tab-content" style="overflow:auto; height: 500px; ">
+	<div id="section.id" ng-repeat="section in sections" id="section.id">
+		<uib-accordion>
+			<uib-accordion-group id="anchor{{section.id}}" heading="{{section.name}}" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
+				<div class="{{section.picture ? 'col-md-8' : 'col-md-12'}}">
+					<info-section section="section" type="section.type"></info-section>
+				</div>
+				<div ng-if="section.picture" class="col-md-4">
+					<img class="col-md-12" ng-src="/images/{{section.picture}}"></img>
+				</div>
+		<!-- </div> -->
+	<!-- </div>
+	</div> -->
+    </uib-accordion-group>
+</uib-accordion>
+		
+	</div>
+</div>

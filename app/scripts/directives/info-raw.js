@@ -7,7 +7,7 @@
  * # infoRaw
  */
  angular.module('webAppApp')
- .directive('infoRaw', function ($filter,$compile,$http, x2js) {
+ .directive('infoRaw', function ($filter,$compile,$http, x2js,$timeout) {
  	return {
  		 link: function(scope, element, attrs){
 
@@ -23,8 +23,10 @@
         },
  		restrict: 'E',
  		scope: {
- 			entity: '=entity',
  			field: '=field',
+ 			fields: '=fields',
+ 			item: '=item',
+      list: '=list',
  			type: '=type'
  		},
  		controller : function ($scope) {
@@ -39,100 +41,7 @@
 				return title.substring(0,title.length-3);
 			};
 
-			switch($scope.type) {
-				case 'simple-field':
-					$scope.raw = {
-	 					type: $scope.field.type,
- 						label : $scope.field.label,
- 						value : $scope.entity[$scope.field.name]
- 					};
- 				break;
- 				case 'complex-field':
- 				 	switch($scope.field.type) {
- 				 		case 'complex':
- 				 		$scope.raw = {
- 							title: $scope.getComplexField('name'),
- 							subtitle: '(' + $scope.getComplexField('subname') + ')'
- 						};
- 						break;
- 						case 'simple':
- 						$scope.raw = {
- 							description : $scope.entity[$scope.field.name]
- 						};
- 						break;
- 						case 'complex-label':
- 						$scope.raw = {
- 							description : $filter('translate')( $scope.field.label,$scope.entity)
- 						};
- 				 	}
- 				break;
- 				case 'group-list':
- 				case 'simple-list':
- 				break;
- 				case 'youtube':
- 					$scope.theBestVideo = $scope.entity.cam;
- 					$scope.playerVars = {
-    					autoplay: 1
-					};
-				break;
- 				case 'aemet':
- 					// $http.get("http://www.aemet.es/xml/municipios_h/localidad_h_33004.xml",{
- 					if(!$scope.prediccion) {
- 					
- 					$http.get("locale/localidad_h_33004.xml",{
-						transformResponse: function (cnv) {
-						  
-						  var aftCnv = x2js.xml_str2json(cnv);
-						  return aftCnv;
-						}
-					}).success(function (response) {
-						/*var mayorQue = function(actual,expected) {
-							var a = 0;
-						};*/
-						console.log(response);
-						console.log($scope.field);
-						$scope.prediccion = response.root.prediccion; 
-						
-						var dateNow = new Date();
-						angular.forEach($scope.field.area, function(item) {
-							$scope.prediccion.dia[0][item.name] = $filter('hourFromNow')($scope.prediccion.dia[0][item.name]); 
-						});
-						var items = [];
-						var first;
-						var last;
-						angular.forEach($scope.prediccion.dia, function(day) {
-							var entityOrder = $filter('orderBy')(day.temperatura, '__text');
-							var firstAux = entityOrder[0];
-    						var lastAux = entityOrder[entityOrder.length-1];
-							if(first !== undefined) {
-								if(first.__text > firstAux.__text) {
-									first = firstAux;
-								}
-							} else {
-								first = firstAux;
-							}
-							if(last !== undefined) {
-								if(last.__text < lastAux.__text) {
-									last = lastAux;
-								}
-							} else {
-								last = lastAux;
-							}
-						});
-   					
-    					for(var i = last.__text; i >= first.__text; i--){
-      						items.push(i);
-						}
-						$scope.infoEntity = {
-							items: items
-						};
-						
-					});
-				}
- 				break;
-			};
- 				
-
+      			
 			/** Esta función se puede usar como comparator en el filter **/
    			$scope.comparator = function(actual, expected) {
      			if (normalize(actual).indexOf(normalize(expected))>=0) {
@@ -141,7 +50,41 @@
           			return false;
         		}
     		};
+         $scope.aemet = [];
+      if($scope.type === 'aemet-field') {
+        $http.get($scope.field.value).then(
+            function(cnv) {
+              var x2js = new X2JS();
 
+              var aftCnv = x2js.xml_str2json(cnv.data);
+
+              $scope.aemet = aftCnv.root.prediccion.dia;
+
+             /* getInfoEntity: function() {*/
+                var low = null;
+                var high = null;
+                var count = 0;
+                angular.forEach($scope.aemet, function(day){
+                  count += day.temperatura.length;
+                  angular.forEach(day.temperatura, function(temperatura) {
+                    if(low == null || low > temperatura.__text) {
+                    low = temperatura.__text;
+                  }
+                  if(high == null || high < temperatura.__text) {
+                    high = temperatura.__text;
+                  }
+                  
+                  });
+                  $scope.infoEntity = [];
+                  for(var i = high; i >= low; i--) {
+                    $scope.infoEntity.push(i);
+                  }
+                });
+                count = count * 35;
+                $scope.aemetStyle = {   width: count + 'px' };
+             /* $scope.infoEntity = getInfoEntity();*/
+          }); 
+      }
  			$scope.status = {
  				isCustomHeaderOpen: false,
  				isFirstOpen: true,

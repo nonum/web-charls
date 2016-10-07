@@ -10,11 +10,17 @@
 angular.module('webAppApp')
   .controller('NavHeaderCtrl', ['$scope', '$rootScope', function ($scope, $rootScope) {
     
-    $scope.nav = [{ name: 'Curriculum', route: 'curriculum', icon: 'glyphicon glyphicon-user'},
-    { name: 'Desarrollo', route: 'development', icon: 'glyphicon glyphicon-console'},
-    { name: 'Mareas', route: 'surf', icon: 'glyphicon glyphicon-cloud'},
-    { name: 'Contacto', route: 'contact', icon: 'glyphicon glyphicon-envelope'}];
+    $scope.nav = [];
 
+    
+    angular.forEach($scope.entities, function(item) {
+       var navItem = {
+         name: item.name, 
+         route: item.id, 
+         icon: 'glyphicon glyphicon-' + item.icon
+       };
+       $scope.nav.push(navItem);
+    });
 
     $scope.isActive = function (viewLocation) { 
     	return viewLocation === $location.path();
@@ -22,4 +28,5 @@ angular.module('webAppApp')
     $scope.changeTab = function () { 
         $rootScope.sectionActive = null;
     };
+
   }]);

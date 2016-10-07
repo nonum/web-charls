@@ -1,11 +1,11 @@
-<lu ng-repeat="group in entity[field.name] | groupBy: field.group | toArray:true ">
+<lu ng-repeat="group in list | groupBy: field.group | toArray:true ">
 		<h3><em>{{ group.$key }}:</em></h3>
-		<li ng-repeat="raw in entity[field.name] | groupFilter: { 'element': group.$key, 'key': field.group }">
+		<li ng-repeat="raw in list | groupFilter: { 'element': group.$key, 'key': field.group }">
 		<info-raw 
-			ng-repeat="fie in field.fields"		
-			entity="raw"
-			field="fie"
-			type="field.type"
+			ng-repeat="fiel in fields"		
+			item="raw"
+			field="fiel"
+			type="fiel.type"
 		</info-raw>
 	</li>
 	</div>

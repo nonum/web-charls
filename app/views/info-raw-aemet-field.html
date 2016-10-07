@@ -1,0 +1,18 @@
+<div class="horizontal-slide no-padding sample-show-hide" >
+     <table ng-style="aemetStyle" class="page-wrap no-padding">
+        <tr>
+    		<td ng-repeat="day in aemet" class="item no-padding">
+    			{{day._fecha | date:'EEE dd'}}
+    			<table>
+                    <tr class="no-padding" >
+                        <td ng-repeat="(iter,key) in day.estado_cielo" class="item2 no-padding">
+                            <div ng-repeat="area in field.area" uib-popover-html="'<b>HTML</b>, <i>inline</i>'" popover-trigger="mouseenter">
+                                <info-raw-aemet type="area.type" field="area" entity="day[area.id]" iter="iter" info-entity="infoEntity"></info-raw-aemet>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>

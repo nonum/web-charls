@@ -1,195 +1,362 @@
-{
-	"curriculum": [
-	{
-		"name" : "curriculum_vitae",
-		"sub_sections": [
-			{
-				"entity" : "personal_information",
-				"active": "true",
-				"picture": "/images/photo.png",
-				"type": "simple-field",
-				"fields": [
-					{ "name": "birthday", "type": "string", "label": "curriculum.label.birthday", "order": "1"},
-					{ "name": "address", "type": "string", "label": "curriculum.label.address","order": "2"},
-					{ "name": "address2", "type": "string", "label": "","order": "3"},
-					{ "name": "mobile_phone", "type": "number", "label": "curriculum.label.mobile_phone","order": "6"},
-					{ "name": "mail", "type": "mail", "label": "curriculum.label.mail","order": "7"},
-					{ "name": "web", "type": "link", "label": "curriculum.label.web","order": "8"}
-				]	
-			},
-			{
-				"entity": "experience",
-				"active": "true",
-				"type": "complex-list",
-				"fields": [
-					{ 
-					  "name": "work_experience",
-					  "type": "complex-field",
-					  "fields" : [
-							{   
-								"label": "curriculum.expirence.title",
-								"type": "complex-label", 
-								"order": "1"
-							},
-							{  
-								"name": "description", 
-								"type": "simple",
-								"order": "1"
-							}
-						]
-					}
-				]
-			},
-			{
-				"entity" : "education",
-				"active": "true",
-				"type": "simple-list",
-				"fields": [
-					{ 
-						"name": "instead_studies",
-						"type": "simple-field", 
-						"fields": [
-							{ "name": "study", "type": "string" }
-						],
-						"order": "1"
-					}
-				]				
-			},
-			{
-				"entity" : "course",
-				"active": "true",
-				"type": "group-list",
-				"fields": [
-					{   
-						"name" : "subject",
-						"type": "complex-field",
-						"group" : "school",
-						"fields": [
-							{
-								"label": "curriculum.course.description",
-								"type": "complex-label", 
-								"order": "1"
-							}
-						]
-					}
-				]
-			},
-			{
-				"entity" : "language",
-				"active": "true",
-				"type": "simple-list",
-				"fields": [
-					{ 
-					  "name": "idiom",
-					  "type": "complex-field", 
-					  "fields": [
-					  	{
-					  		"label": "curriculum.language.description",
-							"type": "complex-label", 
-							"order": "1"
-						}
-					  ],
-					  "order": "1"
-					}			
-				]
-			}
+[
+  {
+    "id": "curriculum",
+    "sections": [
+      {
+        "id": "curriculum_vitae",
+        "sub_sections": [
+          {
+            "entity": "personal_information",
+            "active": "true",
+            "picture": "/images/photo.png",
+            "checked": false,
+            "type": "simple-field",
+            "fields": [
+              {
+                "name": "birthday",
+                "type": "string",
+                "label": "curriculum.label.birthday",
+                "order": "1"
+              },
+              {
+                "name": "address",
+                "type": "string",
+                "label": "curriculum.label.address",
+                "order": "2"
+              },
+              {
+                "name": "address2",
+                "type": "string",
+                "label": "",
+                "order": "3"
+              },
+              {
+                "name": "mobile_phone",
+                "type": "number",
+                "label": "curriculum.label.mobile_phone",
+                "order": "6"
+              },
+              {
+                "name": "mail",
+                "type": "mail",
+                "label": "curriculum.label.mail",
+                "order": "7"
+              },
+              {
+                "name": "web",
+                "type": "link",
+                "label": "curriculum.label.web",
+                "order": "8"
+              }
+            ]
+          },
+          {
+            "entity": "experience",
+            "active": "true",
+            "checked": false,
+            "type": "complex-list",
+            "fields": [
+              {
+                "name": "work_experience",
+                "type": "complex-field",
+                "fields": [
+                  {
+                    "label": "curriculum.expirence.title",
+                    "type": "complex-label",
+                    "order": "1"
+                  },
+                  {
+                    "name": "description",
+                    "type": "simple",
+                    "order": "1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "entity": "education",
+            "active": "true",
+            "checked": false,
+            "type": "simple-list",
+            "fields": [
+              {
+                "name": "instead_studies",
+                "type": "simple-field",
+                "fields": [
+                  {
+                    "name": "study",
+                    "type": "string"
+                  }
+                ],
+                "order": "1"
+              }
+            ]
+          },
+          {
+            "entity": "course",
+            "active": "true",
+            "checked": false,
+            "type": "group-list",
+            "fields": [
+              {
+                "name": "subject",
+                "type": "complex-field",
+                "group": "school",
+                "fields": [
+                  {
+                    "label": "curriculum.course.description",
+                    "type": "complex-label",
+                    "order": "1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "entity": "language",
+            "active": "true",
+            "checked": false,
+            "type": "simple-list",
+            "fields": [
+              {
+                "name": "idiom",
+                "type": "complex-field",
+                "fields": [
+                  {
+                    "label": "curriculum.language.description",
+                    "type": "complex-label",
+                    "order": "1"
+                  }
+                ],
+                "order": "1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "curriculum_tecnico",
+        "sub_sections": [
+          {
+            "entity": "personal_information",
+            "active": "true",
+            "picture": "/images/photo.png",
+            "type": "simple-field",
+            "fields": [
+              {
+                "name": "birthday",
+                "type": "string",
+                "label": "curriculum.label.birthday",
+                "order": "1"
+              },
+              {
+                "name": "address",
+                "type": "string",
+                "label": "curriculum.label.address",
+                "order": "2"
+              },
+              {
+                "name": "address2",
+                "type": "string",
+                "label": "",
+                "order": "3"
+              },
+              {
+                "name": "mobile_phone",
+                "type": "number",
+                "label": "curriculum.label.mobile_phone",
+                "order": "6"
+              },
+              {
+                "name": "mail",
+                "type": "mail",
+                "label": "curriculum.label.mail",
+                "order": "7"
+              },
+              {
+                "name": "web",
+                "type": "link",
+                "label": "curriculum.label.web",
+                "order": "8"
+              }
+            ]
+          },
+          {
+            "entity": "specific_knowledge",
+            "active": "true",
+            "type": "group-list",
+            "fields": [
+              {
+                "name": "knowledge",
+                "type": "complex-field",
+                "group": "type_knowledge",
+                "fields": [
+                  {
+                    "label": "curriculum.knowledge.description",
+                    "type": "complex-label",
+                    "order": "1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "development",
+    "sections": [
+      {
+        "id": "curriculum_vitae",
+        "sub_sections": [
+          {
+            "entity": "personal_information",
+            "active": "true",
+            "picture": "/images/photo.png",
+            "type": "simple-field",
+            "fields": [
+              {
+                "name": "birthday",
+                "type": "string",
+                "label": "curriculum.label.birthday",
+                "order": "1"
+              },
+              {
+                "name": "address",
+                "type": "string",
+                "label": "curriculum.label.address",
+                "order": "2"
+              },
+              {
+                "name": "address2",
+                "type": "string",
+                "label": "",
+                "order": "3"
+              },
+              {
+                "name": "mobile_phone",
+                "type": "number",
+                "label": "curriculum.label.mobile_phone",
+                "order": "6"
+              },
+              {
+                "name": "mail",
+                "type": "mail",
+                "label": "curriculum.label.mail",
+                "order": "7"
+              },
+              {
+                "name": "web",
+                "type": "link",
+                "label": "curriculum.label.web",
+                "order": "8"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "surf",
+    "sections": [
+      {
+        "id": "salinas",
+        "sub_sections": [
+          {
+            "entity": "aemet",
+            "active": "true",
+            "type": "aemet",
+            "fields": [
+              {
+                "name": "aemet",
+                "type": "aemet",
+                "iterator": "_periodo",
+                "area": [
+                  {
+                    "name": "estado_cielo",
+                    "value": "_periodo",
+                    "img": "_periodo",
+                    "type": "aemet-image"
+                  },
+                  {
+                    "name": "estado_cielo",
+                    "value": "",
+                    "img": "__text",
+                    "type": "aemet-image"
+                  },
+                  {
+                    "name": "viento",
+                    "value": "direccion",
+                    "type": "simple-field",
+                    "text": "velocidad"
+                  },
+                  {
+                    "name": "viento",
+                    "value": "velocidad",
+                    "img": "direccion",
+                    "type": "aemet-image",
+                    "text": "velocidad"
+                  },
+                  {
+                    "name": "racha_max",
+                    "value": "__text",
+                    "type": "simple-field",
+                    "text": "__text"
+                  },
+                  {
+                    "name": "temperatura",
+                    "value": "__text",
+                    "type": "table-graphic",
+                    "text": "__text"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "entity": "youtube",
+            "type": "simple-list",
+            "fields": [
+              { 
+                "name": "videos",
+                "type": "youtube",
+                "order": "1",
+                "fields": [
+                  {
 
-		]
-	},
-	{
-		"name" : "curriculum_tecnico",
-		"sub_sections": [
-			{
-				"entity" : "personal_information",
-				"active": "true",
-				"picture": "/images/photo.png",
-				"type": "simple-field",
-				"fields": [
-					{ "name": "birthday", "type": "string", "label": "curriculum.label.birthday", "order": "1"},
-					{ "name": "address", "type": "string", "label": "curriculum.label.address","order": "2"},
-					{ "name": "address2", "type": "string", "label": "","order": "3"},
-					{ "name": "mobile_phone", "type": "number", "label": "curriculum.label.mobile_phone","order": "6"},
-					{ "name": "mail", "type": "mail", "label": "curriculum.label.mail","order": "7"},
-					{ "name": "web", "type": "link", "label": "curriculum.label.web","order": "8"}
-				]	
-			},
-			{
-				"entity": "specific_knowledge",
-				"active": "true",
-				"type": "group-list",
-				"fields": [
-					{   
-						"name" : "knowledge",
-						"type": "complex-field",
-						"group" : "type_knowledge",
-						"fields": [
-							{
-								"label": "curriculum.knowledge.description",
-								"type": "complex-label", 
-								"order": "1"
-							}
-						]
-					}
-				]
-			}
-		]
-	}
-],
+                  }
+                ]
+              },
+              { 
+                "name": "imgVideo",
+                "type": "img-video",
+                "order": "1",
+                "fields": [
+                  {
 
-"development":  [
-	{
-		"name" : "curriculum_vitae",
-		"sub_sections": [
-			{
-				"entity" : "personal_information",
-				"active": "true",
-				"picture": "/images/photo.png",
-				"type": "simple-field",
-				"fields": [
-					{ "name": "birthday", "type": "string", "label": "curriculum.label.birthday", "order": "1"},
-					{ "name": "address", "type": "string", "label": "curriculum.label.address","order": "2"},
-					{ "name": "address2", "type": "string", "label": "","order": "3"},
-					{ "name": "mobile_phone", "type": "number", "label": "curriculum.label.mobile_phone","order": "6"},
-					{ "name": "mail", "type": "mail", "label": "curriculum.label.mail","order": "7"},
-					{ "name": "web", "type": "link", "label": "curriculum.label.web","order": "8"}
-				]	
-			}
-		]
-	}
-],
-"surf": [
-	{
-		"name": "salinas",
-		"sub_sections": [
-			{	
-				"entity": "aemet",
-				"active": "true",
-				"type": "aemet",
-				"fields": [
-					{
-						"name": "aemet",
-						"type": "aemet",
-						"iterator": "_periodo",
-						"area" :[
-							{ "name": "estado_cielo" , "value": "_periodo", "img": "_periodo", "type": "aemet-image"},
-							{ "name": "estado_cielo" , "value": "", "img": "__text", "type": "aemet-image"},
-							{ "name": "viento" , "value": "direccion", "type": "simple-field", "text": "velocidad"},
-							{ "name": "viento" , "value": "velocidad", "img": "direccion", "type": "aemet-image", "text": "velocidad"},
-							{ "name": "racha_max" , "value": "__text",  "type": "simple-field","text": "__text"},
-							{ "name": "temperatura" , "value": "__text",  "type": "table-graphic","text": "__text"}
-								
-						]
-					}
-				]
-			},
-			
-			
-			{	
-				"entity": "windguru",
-				"active": "true"
-			}
-		]
-	}
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "entity": "windguru",
+            "active": "true"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "contact",
+    "sections": [
+      {
+        "id": "contact-form",
+        "sub_sections": []
+      }
+    ]
+  }
 ]
-}
-

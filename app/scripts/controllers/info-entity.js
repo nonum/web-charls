@@ -7,17 +7,19 @@
  * # InfoEntityCtrl
  * Controller of the webAppApp
  */
-angular.module('webAppApp')
-  .controller('InfoEntityCtrl', [ '$scope', '$routeParams', '$rootScope', function ($scope, $routeParams,$rootScope) {
+ angular.module('webAppApp')
+ .controller('InfoEntityCtrl', [ '$scope', '$routeParams', '$rootScope', '$filter', function ($scope, $routeParams,$rootScope,$filter) {
 
-	$scope.metaData = $rootScope.metaData[$routeParams.entity];
-	$scope.sectionActive = $scope.metaData[0].section;
-
- 	$scope.entity = $rootScope.entities[$routeParams.entity];
- 	if(!!$rootScope.sectionActive) {
- 		$scope.sectionActive = $rootScope.sectionActive;
+ 	
+ 	$scope.$on('change-tab', function (event, data) {
+ 		$scope.$broadcast('change-menu', data);
+ 		
+ 	});
+ 	
+ 	if(!!$rootScope.activeMenu && $rootScope.activeMenu === $routeParams.id) {
  	} else {
- 		$scope.sectionActive = !!$scope.sectionActive ? $scope.sectionActive : $scope.entity[0].id;
+ 	  $rootScope.activeTab = $filter('filter')($scope.entities.menu, { id: $routeParams.id })[0].tabs[0];
+ 	  $rootScope.activeTabId = $rootScope.activeTab;
  	}
  	
  }]);

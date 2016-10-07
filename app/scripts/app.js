@@ -37,42 +37,15 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
-      .when('/curriculum', {
+      .when('/entity/:id', {
         templateUrl: 'views/info-entity.html',
         controller: 'InfoEntityCtrl',
-        controllerAs: 'curriculum',
+        controllerAs: ':id',
         resolve: {
-          entity: function ($route) { $route.current.params.entity = constants.ENTITY_CURRICULUM; }
+          entity: function ($route,$routeParams) { 
+            $route.current.params.entity = $routeParams.entity; 
+          }
         }
-      })
-      .when('/development', {
-        templateUrl: 'views/info-entity.html',
-        controller: 'InfoEntityCtrl',
-        controllerAs: 'development',
-        resolve: {
-          entity: function ($route) { $route.current.params.entity = constants.ENTITY_DEVELOPMENT; }
-        }
-      })
-      .when('/surf', {
-        templateUrl: 'views/info-entity.html',
-        controller: 'InfoEntityCtrl',
-        controllerAs: 'surf',
-        resolve: {
-          entity: function ($route) { $route.current.params.entity = constants.ENTITY_SURF; }
-        }
-      })
-      .when('/contact', {
-        templateUrl: 'views/info-entity.html',
-        controller: 'InfoEntityCtrl',
-        controllerAs: 'contact',
-        resolve: {
-          entity: function ($route) { $route.current.params.entity = constants.ENTITY_CONTACT; }
-        }
-      })
-      .when('/info-entity', {
-        templateUrl: 'views/info-entity.html',
-        controller: 'InfoEntityCtrl',
-        controllerAs: 'infoEntity'
       })
       .otherwise({
         redirectTo: '/'
@@ -91,15 +64,11 @@ angular
 
   }])
   .run(['$rootScope', 'locale', function($rootScope, locale) {
-  
-      locale.get('meta-data').then(function (msg) {
-        $rootScope.metaData = msg.data;
-      });
 
-      locale.get('entities').then(function (msg) {
+
+      locale.get('newEntities').then(function (msg) {
         $rootScope.entities = msg.data;
       });
-
       var tag = document.createElement('script');
       tag.src = "http://www.youtube.com/iframe_api";
       var firstScriptTag = document.getElementsByTagName('script')[0];

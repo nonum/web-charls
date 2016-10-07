@@ -10,9 +10,9 @@
 
 
 	"curriculum.expirence.title": "{{company}} - {{client}} ({{start_date}} - {{end_date}})",
-	
+	"curriculum.expirence.description": "{{description}}",
 	"curriculum.course.description" : "{{name}} ({{duration}} {{type_duration}}) - {{year}}",
-
+	"curriculum.education.idiom": "{{study}}",
 	"curriculum.language.description": "{{name}}: {{description}}",
 
 	"curriculum.knowledge.description": "{{description}}",
