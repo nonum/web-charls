@@ -428,6 +428,35 @@
         {
           "value": "http://localhost:9050/locale/localidad_h_33004.xml",
           "type": "aemet",
+          "popover": [
+            {
+              "id": "estado_cielo",
+              "value": "_descripcion",
+              "label": "surf.aemet.sky",
+              "type": "iter"
+            },
+            {
+              "id": "prob_precipitacion",
+              "value": "__text",
+              "label": "surf.aemet.prob.precip",
+              "type": "_periodo",
+              "labelText":  "surf.aemet.precip.textLabel"
+            },
+            {
+              "id": "prob_nieve",
+              "value": "__text",
+              "label": "surf.aemet.prob.precip",
+              "type": "_periodo",
+              "labelText":  "surf.aemet.precip.textLabel"
+            },
+            {
+              "id": "prob_tormenta",
+              "value": "__text",
+              "label": "surf.aemet.prob.precip",
+              "type": "_periodo",
+              "labelText":  "surf.aemet.precip.textLabel"
+            }
+          ],
           "area": [
             {
               "id": "estado_cielo",

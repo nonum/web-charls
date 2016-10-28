@@ -4,9 +4,9 @@
     		<td ng-repeat="day in aemet" class="item no-padding">
     			{{day._fecha | date:'EEE dd'}}
     			<table>
-                    <tr class="no-padding" >
-                        <td ng-repeat="(iter,key) in day.estado_cielo" class="item2 no-padding">
-                            <div ng-repeat="area in field.area" uib-popover-html="'<b>HTML</b>, <i>inline</i>'" popover-trigger="mouseenter">
+                    <tr class="no-padding">
+                        <td ng-repeat="(iter,key) in day.estado_cielo" class="item2 no-padding" uib-popover-template="'views/info-aemet-popover.html'" popover-title="{{key._periodo}}" popover-placement="right" popover-trigger="mouseenter">
+                            <div ng-repeat="area in field.area" >
                                 <info-raw-aemet type="area.type" field="area" entity="day[area.id]" iter="iter" info-entity="infoEntity"></info-raw-aemet>
                             </div>
                         </td>

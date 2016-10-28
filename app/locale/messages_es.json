@@ -64,5 +64,11 @@
 	"Nuboso con tormenta y lluvia escasa": "72",
 	"Nuboso con tormenta y lluvia escasa noche": "72n",
 	"Muy nuboso con tormenta y lluvia escasa": "73",
-	"Cubierto con tormenta y lluvia escasa": "74"
+	"Cubierto con tormenta y lluvia escasa": "74",
+
+	"surf.aemet.sky": "Cielo",
+	"surf.aemet.prob.precip": "Prob. precip. (%)",
+	"surf.aemet.prob.snow": "Prob. nieve. (%)",
+	"surf.aemet.prob.storm": "Prob. de tormenta (%)",
+	"surf.aemet.precip.textLabel": "{{prob}}% ({{init}} - {{end}}h)"
 }
